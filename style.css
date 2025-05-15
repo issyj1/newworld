@@ -861,7 +861,10 @@ ul, #myUL, li, .nested {
       }
         
 
-
+      .containerex img {
+        width: 80%;
+      }
+      
 
 
 
