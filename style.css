@@ -923,14 +923,14 @@ ul, #myUL, li, .nested {
   font-size: 10px;
 }
 
+.preload img {
+  width: 30%;
+}
 
 
   }
 
-  .preload img {
-    width: 30%;
-  }
-  
+
   /*end of media query*/
 
   .fade-item:active {
