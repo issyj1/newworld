@@ -815,13 +815,18 @@ ul, #myUL, li, .nested {
      h1 {
         display: block;
         width: 45%;
-        font-size: 3em;
+        font-size: 2.5em;
         padding-top: 5px;
         white-space: nowrap;
         /*margin: auto;  */ 
         /*text-align: center;*/
      }
      
+     h2 {
+      font-size: 3em;
+      line-height: 1.2;
+
+     }
 
        li {
             display: block;
