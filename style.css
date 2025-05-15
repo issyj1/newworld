@@ -1,0 +1,997 @@
+* {box-sizing:border-box}
+
+
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('fonts/BodoniModa_72pt-BlackItalic.ttf') format('ttf'); /* WOFF2 format for better browser support */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Walbaum';
+  src: url('fonts/WalbaumCom-Roman.ttf') format('ttf'); /* WOFF2 format for better browser support */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Cobe';
+  src: url('fonts/cobeextrabold.ttf') format('ttf'); /* WOFF2 format for better browser support */
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// <weight>: Use a value from 400 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.bodoni-moda-<uniquifier> {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+    color: rgb(40, 27, 77);
+    box-sizing: border-box;
+    font-family: "Bodoni Moda";
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    max-width: 1000px;
+    overscroll-behaviour: none;
+  }
+  
+ 
+
+  main {
+    /*margin-left: 160px;*/
+    width: 90%;
+    max-width: 1080px;
+    
+  }
+
+  .containerex {
+
+    display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+    margin-right: 10px;
+    margin-left: 5px;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    padding-bottom: 50px;
+  }
+.containerex img {
+  -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+  margin: 10px;
+}
+
+  h1 {
+
+    font-size: 2em;
+    font-family: Helvetica, sans-serif;    
+    font-weight: 200;
+    letter-spacing: 7px;
+    cursor: grab;
+    position: sticky;
+    margin: 0 auto;
+    align-content: center;
+    padding-top: 10px;
+    
+  }
+
+
+h1 a {
+  color: rgb(0, 0, 0);
+  margin: 20px;
+
+}
+
+h2 {
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 3em;
+  padding: 0;
+}
+
+h4{
+  font-size: 1.2em;
+}
+
+p {
+  font-family: "Bodoni Moda";
+  font-weight: 100;
+}
+
+.mystyle {
+  color: rgb(170, 4, 211);
+  font-style: bold;
+}
+
+.mystyle2 {
+  color: rgb(211, 4, 104);
+  font-style: bold;
+}
+
+.mystyle3 {
+  color: rgb(250, 12, 195);
+  font-style: bold;
+}
+#footer {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;            /* Default to row on larger screens */
+  justify-content: space-between; /* Space between items */
+  align-items: center;            /* Center items vertically */
+  color: rgb(0, 195, 255);        /* Footer text color */
+  font-size: 0.7em;               /* Default font size */
+  z-index: 4;
+  background-color: black;
+  position: fixed;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px;                  /* Padding to add space inside footer */
+  width: 100vw;                   /* Full width */
+}
+
+#footer li {
+  padding: 10px;
+  color: lightpink;               /* List item color */
+}
+
+/*the two image rows and column gallery*/
+    /* Remove hyperlink lines */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+
+
+    .worldgif {
+      z-index: -1;
+      position: absolute;
+    }
+
+    /*dashed line test*/
+
+    .dashed-line {
+    width: 100%; /* Full width */
+    height: 2px; /* Line height */
+    border-top: 1px dashed #dbdada; /* Dashed line with 2px width and black color */
+    position: relative; 
+  }
+   /*break space*/
+.break {
+  padding: 80px;
+}
+/*TEST FOR TREE LIST*/
+    /* Remove hyperlink lines */
+
+/*Responsive image grid*/
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: 50%;
+      max-width: 50%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+/*END - Responsive image grid*/
+
+
+/*BANNER along bottom*/
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  border: 0.1px solid #b8b6b6;
+  height: 200px;
+
+}
+
+.image-container {
+  display: flex;
+  animation: slide 25s linear infinite;
+  height: 200px;
+
+}
+
+.image-container img {
+
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+
+
+}
+
+/*logo BANNER along bottom*/
+
+.banner2 {
+  width: 100%;
+  align-items: center;
+  height: 100px;
+}
+
+.image-container2 {
+  display: flex;
+  height: 80px;
+}
+
+.image-container2 img {
+  margin-left: 15px;
+
+  flex-shrink: 0;
+}
+
+@media (max-width: 468px) {
+  .image-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Optional, for space between images */
+
+  }
+
+  .image-container2 img {
+    width: 40%; /* Ensure images are responsive */
+    height: auto;
+    display: block;
+
+  }
+}
+
+/* Old code */
+
+
+
+
+  /*galleries in section pages */
+
+
+  .backgroundtest {
+    background-color:rgba(224, 135, 253, 0.5);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    display: none;
+    font-size: 1.8rem;
+    transition: .3s ease;
+    z-index: -1;
+  }
+
+  .backgroundtest.active {
+    background-color:rgba(224, 135, 253, 0.5);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: 1.8rem;
+    transition: .3s ease;
+    z-index: 1;
+  }
+
+/*galleries in section pages */
+
+/* list items before ham */
+    /* Create four equal columns that sits next to each other */
+  
+
+    .myUl {
+      display: flex;
+        flex-direction: column;
+        z-index: 4;
+        float: right;
+    text-decoration: none;
+    }
+
+  ul {
+    z-index: -1;
+  }
+
+    a {
+      text-decoration: none;  
+    }
+
+   .myUL a {
+      color: rgb(219, 58, 219);
+    }
+
+    .myUl li {
+      color: pink;
+      text-decoration: none;
+
+       }
+
+    .myUL a:hover {
+      color: rgb(147, 21, 111);
+
+    }
+ 
+li {
+
+        display: inline-block;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        text-decoration: none;
+        color: rgb(52, 8, 107);
+        border-radius: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        width: max-content;
+        list-style: none;   
+
+}
+
+
+/*ham menu - not displaying on desktop */
+
+/* Styling for the hamburger menu and navigation links */
+.offscreenmenu {
+  position: relative;
+  z-index: 6;
+
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  z-index: 6;
+}
+
+/* Make the navigation visible on larger screens */
+.myUL {
+  display: flex;
+  list-style-type: none;
+}
+
+/* Style the links */
+.fade-item a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+
+
+/* Overlay background that will cover the screen */
+.overlay {
+  display: none; /* Hidden by default */
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  z-index: 1; /* Behind the menu */
+}
+
+/* When in mobile view */
+@media screen and (max-width: 768px) {
+
+  h1 {
+    z-index: 4;
+    text-align: left;
+
+  }
+
+  .h1-white a {
+    color: white;
+  }
+
+  .hamburger-icon-white {
+    color: white;
+  }
+ 
+  .hamburger-icon {
+    display: block; /* Show the hamburger icon on mobile */
+    z-index: 99;
+    margin-left: 20px;
+    position: relative;
+  }
+
+  .myUL {
+    display: none; /* Hide the links initially */
+    flex-direction: column;
+    position: absolute;
+    margin-left: 20px;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out; /* Add smooth transition */
+    padding: 20px;
+
+  }
+  
+
+  .myUL.show {
+    display: flex; /* Show links when the menu is toggled */
+    opacity: 1; /* Fade in effect */   
+  }
+
+  .myUL li {
+    text-align: left;
+    width: 100%;
+padding-top: 20px;
+margin-left: -40px;
+  }
+
+  .myUL li a {
+        color: white;
+
+  }
+
+  .off-screen-menu {
+    background-color: rgb(250, 12, 195);
+    height: 100vh;
+    width:100%;
+    top: 0;
+    right: -800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: .3s ease;
+    z-index: 1;
+    position: fixed;
+  }
+
+  .off-screen-menu.show {
+    display: block;
+    right: 0px;
+  }
+  .offscreenmenu ul {
+    padding-left: 0px;
+  }
+
+
+}
+
+@media screen and (max-width: 468px) {
+  .hamburger-icon {
+    display: block; /* Show the hamburger icon on mobile */
+    z-index: 99;
+  }
+
+
+  .myUL.show {
+    display: flex; /* Show links when the menu is toggled */
+  }
+
+
+}
+
+
+/* end of ham*/
+
+
+/*preload */
+
+.preload-finish {
+  display: none;
+}
+.preload {
+background-color: #fafafa;
+height: 100%;
+margin: 20px;
+
+}
+
+.loader-inner {
+width: 10%;
+align-content: center;
+margin-left: 5%;
+margin-top: 5%;
+margin-bottom: 5%;
+}
+
+.preload img {
+width: 10%;
+height: 10%;
+align-content: center;
+}
+
+
+/*text overlays*/
+
+
+
+/*overlay image*/
+/* Container for all the gallery items */
+
+/* Container for the two columns */
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Horizontal gap between the columns */
+  margin: 20px;
+}
+
+/* Individual gallery columns */
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Vertical gap between items */
+}
+
+/* Style for individual gallery items */
+.gallery-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Let items take their natural height */
+  overflow: hidden;
+}
+
+h2.image {
+  background-color: red;
+  -webkit-filter: drop-shadow(1px 1px 1px #110808);
+  height: 120px;
+  align-content: center;
+}
+
+
+/* what i do button and overlays test */
+
+.button-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-gap: 10px;
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fda839;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.wide-button {
+  grid-column: span 2; /* This makes the 5th button span across 2 columns */
+}
+
+.button-text {
+  z-index: 0;
+
+}
+
+.overlaybutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(220, 218, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlaybutton-text {
+  color: #d507df;
+  font-size: 18px;
+}
+
+.button:hover .overlaybutton {
+  opacity: 1;
+}
+
+.button:hover .button-text {
+  visibility: hidden;
+}
+
+
+/* Style for the images */
+.gallery-item img {
+  width: 100%; /* Make image take full width of the parent container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any space below the image */
+  object-fit: cover; /* Ensure the images cover their container without distortion */
+}
+
+/* Style for the overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(247, 17, 236); /* Semi-transparent dark overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text inside overlay */
+.overlay .text {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+
+}
+
+/* Show overlay when hovering over the image */
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+  /* Change the layout to one column on mobile devices */
+  .gallery-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  /* Adjust spacing between items in single column */
+  .gallery-column {
+    gap: 15px; /* Smaller gap on mobile */
+  }
+}
+
+
+
+
+/* next click gallery */
+
+.img-gallery img {
+  width: 50%;
+  display: block;
+  left: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: grab;
+  position: absolute;
+  bottom: 0.3%;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+/* Next & previous buttons */
+.prev {
+    padding-right: 200px;
+    padding-top: 610px;
+    padding-left: 4px;
+    background-color:rgba(255, 217, 0 /50%);
+  }
+/* Position the "next button" to the right 
+WHY NOT WORKING?*/
+.next {
+    left: 30%;
+    padding-left: 200px;
+    padding-top: 610px;
+    padding-right: 4px;
+    background-color:rgba(255, 217, 0 /50%);
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover {
+  cursor: url(svg/prev.svg), auto; 
+  background-color:rgba(255, 217, 0 /50%);
+
+}
+
+.next:hover {
+  cursor: url(svg/Untitled-2.svg), auto; 
+  background-color:rgba(255, 217, 0 /50%);
+
+}
+
+
+
+/*media queries*/
+@media only screen and (max-width: 768px) {
+
+ul, #myUL, li, .nested {
+  z-index: 999;
+}
+  .img-gallery {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    margin-right: 0;
+    z-index: -1;
+
+  }
+    .img-gallery img {
+       padding-bottom: 2%;
+       padding-right: 3%; 
+       margin-left: auto; 
+       z-index: -1;
+
+    }
+
+    #img-gallery-portrait {
+      width: 100%;
+      z-index: -1;
+      margin: auto;
+
+
+    }
+    
+    #img-gallery-portrait img {
+      width: 100%;
+      z-index: -1;
+
+    }
+    
+   
+        
+
+        .nested .about {
+            width: 500px;
+            background-color: rgb(250 250 250/ 70%);
+            z-index: 3;
+        }
+    
+
+      }
+
+
+   
+      
+        @media only screen and (max-width: 430px) {
+
+          body {
+            max-width: 88%;
+            margin-left: 6px;
+          }
+
+     h1 {
+        display: block;
+        width: 45%;
+        font-size: 3em;
+        white-space: nowrap;
+        /*margin: auto;  */ 
+        /*text-align: center;*/
+     }
+     
+
+       li {
+            display: block;
+            /*margin: auto;  */ 
+            margin-top: 3px;
+        }
+
+
+
+
+        ul, #myUL {
+            display: block;
+            z-index: 99;
+            padding-left: 7px;
+
+            /*margin: auto;  */ 
+        }
+
+        html {
+          box-sizing: border-box;
+        }
+
+
+
+ 
+        .img-gallery img {
+          
+          z-index: -1;
+         margin-left: 0;
+         padding: 0;
+         align-content: center;
+      }
+        
+
+
+
+
+
+    :root {
+      overscroll-behavior: none;
+    }
+
+    h1 {
+      margin-left: 2px;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    #footer {
+      flex-direction: column;          /* Stack items vertically */
+      align-items: center;             /* Center items horizontally */
+      font-size: 0.9em;                /* Slightly larger font for mobile */
+      padding: 15px; 
+      position:static;
+      /* Add more padding for mobile */
+    }
+  
+    #footer li {
+      padding: 5px;                    /* Reduce padding for mobile */
+      font-size: 1em;                   /* Adjust list item font size */
+    }
+
+    /* buttons for mobile view*/
+
+.button {
+  width: 100%;
+}
+
+.button-container {
+  grid-template-columns: 1fr; /* 1 column, full width */
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 5px;
+}
+
+
+.wide-button {
+  grid-column: span 1; /* This makes the 5th button span across 2 columns */
+}
+
+.button-text {
+  z-index: 0;
+}
+
+
+
+
+.overlaybutton-text {
+  color: #d507df;
+  font-size: 10px;
+}
+
+
+
+  }
+
+
+  
+  /*end of media query*/
+
+  .fade-item:active {
+    color: red;
+  }
+
+
+.fade-item {
+  transition: 0.1s;
+  opacity: 0;
+}
+
+.fadein {
+  animation: fadeIn 0.9s 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+$total-items: 10;
+
+
+li {
+  position: relative;
+  display: block;
+  animation: 0.5s linear;
+  animation-fill-mode: both;
+}
+
+
+@for $i from 1 through $total-items {
+  .fade-item:nth-child(#{$i}) {
+    animation-delay: 0s * $i;
+  }
+} 
+
+
+.fade2 {
+  transition: 0.1s;
+  opacity: 0;
+}
+
+.fadein2 {
+  animation: fadeIn2 0.9s 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeIn2 {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+$total-items: 17;
+
+
+@for $i from 1 through $total-items {
+  .fade2:nth-child(#{$i}) {
+    animation-delay: 0s * $i;
+  }
+} 
