@@ -62,7 +62,7 @@ flex-wrap: wrap;
 width: 100%;
     justify-content: space-evenly;
     margin-left: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
   }
 .containerex img {
   -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
