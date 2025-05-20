@@ -223,7 +223,7 @@ p {
   align-items: center;
   border: 0.1px solid #b8b6b6;
   height: 200px;
-
+  margin-bottom: 25px;
 }
 
 .image-container {
