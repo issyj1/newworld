@@ -72,6 +72,7 @@ width: 100%;
 
     font-size: 2em;
     font-weight: 200;
+      font-family: Helvetica, sans-serif;
     letter-spacing: 7px;
     cursor: grab;
     position: sticky;
@@ -90,7 +91,6 @@ h1 a {
 h2 {
   font-size: 3em;
   font-weight: 100;
-  font-family: Helvetica, sans-serif;
   line-height: 1;
   letter-spacing: 2px;
 }
