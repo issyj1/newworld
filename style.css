@@ -34,13 +34,19 @@
   font-style: normal;
 }
 
-body {
+  body, html {
+    margin: 0; /* Remove default margins */
+    height: 100%; /* Make sure the body takes full viewport height */
+    overflow-x: hidden; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Prevent vertical scrolling */
+  }
+
+  body {
     color: rgb(40, 27, 77);
     box-sizing: border-box;
     font-family: "Bodoni Moda";
     background-color: #FAFAFA;
     overflow-x: hidden;
-    max-width: 1000px;
     overscroll-behaviour: none;
   }
   
