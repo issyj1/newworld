@@ -663,7 +663,12 @@ h2.image {
   visibility: hidden;
 }
 
-
+.button:active .overlaybutton {
+  opacity: 1;
+}
+.button:active .button-text {
+  visibility: hidden;
+}
 /* Style for the images */
 .gallery-item img {
   width: 100%; /* Make image take full width of the parent container */
