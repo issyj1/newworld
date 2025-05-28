@@ -1,6 +1,8 @@
 * {box-sizing:border-box}
 
-
+/* ===================== */
+/*        FONTS          */
+/* ===================== */
 
 @font-face {
   font-family: 'Bodoni Moda';
@@ -27,76 +29,115 @@
 // <weight>: Use a value from 400 to 900
 // <uniquifier>: Use a unique and descriptive class name
 
-.bodoni-moda-<uniquifier> {
-  font-family: "Bodoni Moda", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 
+/* ===================== */
+/*        SECTIONS          */
+/* ===================== */
   body, html {
     margin: 0; /* Remove default margins */
     height: 100%; /* Make sure the body takes full viewport height */
     overflow-x: hidden; /* Enables horizontal scrolling */
     overflow-y: auto; /* Prevent vertical scrolling */
-  }
+}
 
   body {
-    color: rgb(40, 27, 77);
+    color: rgb(209, 7, 7);
     box-sizing: border-box;
-    font-family: "Bodoni Moda";
-    background-color: #FAFAFA;
+    font-family: "Helvetica";
+    background-color: #f6f3f7;
     overflow-x: hidden;
     overscroll-behaviour: none;
+    background-size: cover;   /* Makes the background image cover the full width and height */
+
   }
   
- 
 
   main {
     /*margin-left: 160px;*/
     width: 90%;
     max-width: 1080px;
-    padding: 1rem;
-    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+
   }
 
   .containerex {
 
     display: flex;
 flex-direction: column;
-flex-wrap: wrap;
 width: 100%;
+padding-left: 40%;
     justify-content: space-evenly;
-    margin-left: 20px;
-    padding-bottom: 5px;
+    margin-left: 0px;
+    padding-bottom: 50px;
   }
+
 .containerex img {
   -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
 }
 
-  h1 {
+.section-info {
 
-    font-size: 2em;
-    font-weight: 200;
-      font-family: Helvetica, sans-serif;
-    letter-spacing: 7px;
-    cursor: grab;
-    position: sticky;
-    margin: 0 auto;
-    align-content: center;
-    
-  }
+  display: flex;
+flex-direction: column;
+width: 100%;
+padding-left: 30%;
+  justify-content: space-evenly;
+  margin-left: 0px;
+  padding-bottom: 50px;
+}
+
+
+/* ===================== */
+/*        Headings and text styles          */
+/* ===================== */
 
 
 h1 a {
-  color: rgb(0, 0, 0);
   margin: 20px;
+  top: -10px;
+}
+
+.h1-white {
+  color: white;
+}
+
+.h1-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); /* Flip to face inward */
+  top: 80px;
+  z-index: 1000;
 
 }
+
+.mainly-text,
+.ads-text {
+  font-size: 7em;
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  cursor: grab;
+  z-index: 1000;
+}
+
+.ads-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
 
 h2 {
   font-size: 3em;
   font-weight: 100;
+  font-family: Helvetica, sans-serif;
   line-height: 1;
   letter-spacing: 2px;
 }
@@ -113,7 +154,32 @@ h4{
 p {
   font-family: "Bodoni Moda";
   font-weight: 100;
+ 
 }
+
+li {
+
+  display: inline-block;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-decoration: none;
+  color: rgb(114, 51, 51);
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  width: max-content;
+  list-style: none;   
+
+}
+
+
+
+
+
+/* ===================== */
+/*        EXTRA COLORS          */
+/* ===================== */
 
 .mystyle {
   color: rgb(170, 4, 211);
@@ -129,6 +195,10 @@ p {
   color: rgb(250, 12, 195);
   font-style: bold;
 }
+
+/* ===================== */
+/*        FOOTER          */
+/* ===================== */
 #footer {
   bottom: 0;
   display: flex;
@@ -161,8 +231,10 @@ p {
       position: absolute;
     }
 
-    /*dashed line test*/
-
+ 
+/* ===================== */
+/*        EXTRA STYLES          */
+/* ===================== */
     .dashed-line {
     width: 100%; /* Full width */
     height: 2px; /* Line height */
@@ -213,6 +285,9 @@ p {
       }
     }
 /*END - Responsive image grid*/
+/* ===================== */
+/*        BANNERS         */
+/* ===================== */
 
 
 /*BANNER along bottom*/
@@ -223,7 +298,7 @@ p {
   align-items: center;
   border: 0.1px solid #b8b6b6;
   height: 200px;
-  margin-bottom: 25px;
+
 }
 
 .image-container {
@@ -249,46 +324,12 @@ p {
 
 }
 
-/*logo BANNER along bottom*/
 
-.banner2 {
-  width: 100%;
-  align-items: center;
-  height: 100px;
+.List {
+  width: 50%;
+  padding-bottom: 50px;
+  left: 2px;
 }
-
-.image-container2 {
-  display: flex;
-  height: 80px;
-  margin-bottom: 3rem;
-
-}
-
-.image-container2 img {
-  margin-left: 15px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 468px) {
-  .image-container2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 10px; /* Optional, for space between images */
-
-  }
-
-  .image-container2 img {
-    width: 40%; /* Ensure images are responsive */
-    height: auto;
-    display: block;
-
-  }
-}
-
-/* Old code */
-
-
-
 
   /*galleries in section pages */
 
@@ -324,19 +365,15 @@ p {
 /* list items before ham */
     /* Create four equal columns that sits next to each other */
   
+/* ===================== */
+/*        NAV          */
+/* ===================== */
 
-    .myUl {
-      display: flex;
-        flex-direction: column;
-        z-index: 4;
-        float: right;
-    text-decoration: none;
+/*media queries*/
 
-    }
 
-  ul {
-    z-index: -1;
-    
+  ul, #myUL, li {
+    z-index: 999;
   }
 
     a {
@@ -358,21 +395,7 @@ p {
 
     }
  
-li {
 
-        display: inline-block;
-        padding-bottom: 4px;
-        padding-top: 4px;
-        text-decoration: none;
-        color: rgb(52, 8, 107);
-        border-radius: 20px;
-        padding-right: 10px;
-        padding-left: 10px;
-        margin-bottom: 5px;
-        width: max-content;
-        list-style: none;   
-
-}
 
 
 /*ham menu - not displaying on desktop */
@@ -387,20 +410,19 @@ li {
 .hamburger-icon {
   font-size: 30px;
   cursor: pointer;
-  display: none; /* Hidden by default */
   z-index: 6;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Make the navigation visible on larger screens */
-.myUL {
-  display: flex;
-  list-style-type: none;
-}
+
 
 /* Style the links */
 .fade-item a {
   text-decoration: none;
-  color: black;
+
+    color: white;
   padding: 10px;
 }
 
@@ -419,7 +441,6 @@ li {
 }
 
 /* When in mobile view */
-@media screen and (max-width: 768px) {
 
   h1 {
     z-index: 4;
@@ -447,10 +468,8 @@ li {
     flex-direction: column;
     position: absolute;
     margin-left: 20px;
-    width: 100%;
     transition: opacity 0.3s ease-in-out; /* Add smooth transition */
     padding: 20px;
-
   }
   
 
@@ -460,10 +479,8 @@ li {
   }
 
   .myUL li {
-    text-align: left;
-    width: 100%;
-padding-top: 20px;
-margin-left: -40px;
+padding-top: 200px;
+margin: 0 auto;
   }
 
   .myUL li a {
@@ -476,7 +493,7 @@ margin-left: -40px;
     height: 100vh;
     width:100%;
     top: 0;
-    right: -800px;
+    right: -1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -497,7 +514,7 @@ margin-left: -40px;
   }
 
 
-}
+
 
 @media screen and (max-width: 468px) {
   .hamburger-icon {
@@ -517,6 +534,7 @@ margin-left: -40px;
   li.fade2.fadein {
     font-size: 1.1em;
   }
+
   div.banner {
     height: 300px;
     width: 100%;
@@ -634,21 +652,19 @@ h2.image {
 
 }
 
-  .overlaybutton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(220, 218, 218);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 9999;  /* Ensure it's on top */
-  }
-  
+.overlaybutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(220, 218, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 
 .overlaybutton-text {
   color: #d507df;
@@ -663,12 +679,7 @@ h2.image {
   visibility: hidden;
 }
 
-.button:active .overlaybutton {
-  opacity: 1;
-}
-.button:active .button-text {
-  visibility: hidden;
-}
+
 /* Style for the images */
 .gallery-item img {
   width: 100%; /* Make image take full width of the parent container */
@@ -700,9 +711,21 @@ h2.image {
 
 }
 
+
+
 /* Show overlay when hovering over the image */
 .gallery-item:hover .overlay {
   opacity: 1;
+}
+
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.rotate-on-hover:hover {
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+  ; /* You can change 5deg to any small angle */
 }
 
 /* Media Query for Mobile View */
@@ -776,56 +799,49 @@ WHY NOT WORKING?*/
 
 
 
-/*media queries*/
-@media only screen and (max-width: 768px) {
 
-ul, #myUL, li, .nested {
-  z-index: 999;
+/*banners*/
+
+/*logo BANNER along bottom*/
+
+.banner2 {
+  width: 100%;
+  align-items: center;
+  height: 100px;
 }
-  .img-gallery {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-    padding-left: 3%;
-    padding-bottom: 5%;
-    margin-right: 0;
-    z-index: -1;
+
+.image-container2 {
+  display: flex;
+  height: 80px;
+  margin-bottom: 3rem;
+
+}
+
+.image-container2 img {
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 468px) {
+  .image-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Optional, for space between images */
 
   }
-    .img-gallery img {
-       padding-bottom: 2%;
-       padding-right: 3%; 
-       margin-left: auto; 
-       z-index: -1;
 
-    }
+  .image-container2 img {
+    width: 40%; /* Ensure images are responsive */
+    height: auto;
+    display: block;
 
-    #img-gallery-portrait {
-      width: 100%;
-      z-index: -1;
-      margin: auto;
+  }
+}
 
-
-    }
-    
-    #img-gallery-portrait img {
-      width: 100%;
-      z-index: -1;
-
-    }
-    
-   
         
 
-        .nested .about {
-            width: 500px;
-            background-color: rgb(250 250 250/ 70%);
-            z-index: 3;
-        }
-    
 
-      }
-
+      
 
    
       
@@ -845,6 +861,7 @@ ul, #myUL, li, .nested {
         width: 45%;
         font-size: 2.5em;
         padding-top: 5px;
+    
         white-space: nowrap;
         /*margin: auto;  */ 
         /*text-align: center;*/
