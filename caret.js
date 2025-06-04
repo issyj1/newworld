@@ -1,31 +1,4 @@
-var toggler = document.getElementsByClassName("caret");
-var i;
 
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("active");
-        this.classList.toggle("caret-down");
-  });
-}
-
-/*preloader
-window.onload = function() {
-  var preloader = document.getElementById("preloader");
-  preloader.style.display = "none"; // Or preloader.parentNode.removeChild(preloader);
-};
-*/
-const preloader = document.querySelector('.preload');
-  setTimeout(() => {
-    preloader.style.display = 'none'; // Hide preloader after 1 second
-  }, 1000);
-
-/*const nestedAbout = document.querySelector("h1");
-const backgroundTest = document.querySelector('.backgroundtest');
-
-nestedAbout.addEventListener('click', () => {
-  backgroundTest.classList.toggle('active');
-})
-/*TEST*/
 
 
 
@@ -57,40 +30,8 @@ var items = document.getElementsByClassName("fade-item");
 
 /*const hamMenu = document.querySelector('.ham-menu');
 
-const offScreenMenu = document.querySelector('.off-screen-menu');
-
-hamMenu.addEventListener('click', () => {
-  hamMenu.classList.toggle('active');
-  offScreenMenu.classList.toggle('active');
-})*/
 
   /*BACKGROUND color test*/
-
-
-
-
-/* Front page slideshow 
-
-  let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
- 
-  slides[slideIndex-1].style.display = "block";
-}
-  */
 
 
 
@@ -121,55 +62,6 @@ var items = document.getElementsByClassName("fade2");
 
 
 
-  /*test for the src buttons*/
-  window.onload = function() {
-    const bannerImages = document.querySelector('.banner-images');
-    const images = document.querySelectorAll('.image-container');
-    const buttons = document.querySelectorAll('.file-path-btn');
-    const totalImages = images.length;
-    let currentIndex = 0;
-
-    // Function to update the file path button text
-    function updateFilePath() {
-        buttons.forEach((button, index) => {
-            if (index === currentIndex) {
-                button.textContent = images[index].querySelector('img').src; // Set the file path as button text
-            } else {
-                button.textContent = ''; // Clear other buttons
-            }
-        });
-    }
-
-    // Function to scroll to the next image
-    function moveToNextImage() {
-        currentIndex++;
-        if (currentIndex >= totalImages) {
-            currentIndex = 0; // Loop back to the first image
-        }
-        updateFilePath();
-        bannerImages.style.transform = `translateX(-${100 * currentIndex}%)`;
-    }
-
-    // Function to scroll to the previous image
-    function moveToPreviousImage() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = totalImages - 1; // Go to the last image
-        }
-        updateFilePath();
-        bannerImages.style.transform = `translateX(-${100 * currentIndex}%)`;
-    }
-
-    // Auto-scroll every 4 seconds
-    setInterval(moveToNextImage, 4000);
-
-    // Event listeners for the next/previous buttons
-    document.querySelector('.next-btn').addEventListener('click', moveToNextImage);
-    document.querySelector('.prev-btn').addEventListener('click', moveToPreviousImage);
-
-    // Initially update file path for the first image
-    updateFilePath();
-};
 
 //test for ham menu//
 
@@ -189,20 +81,161 @@ function toggleMenu() {
   hamburgerIcon.classList.toggle('hamburger-icon-white');
 }
 
-/*function toggleMenu() {
-  var menu = document.querySelector('.myUL');
-  var overlay = document.querySelector('.off-screen-menu');
-  menu.classList.toggle('show'); // Toggle the visibility of the menu
-  overlay.classList.toggle('show'); // Toggle the overlay background
-
-}*/
-
-/*const hamMenu = document.querySelector('.ham-menu');
-
-const offScreenMenu = document.querySelector('.off-screen-menu');
 
 
-hamMenu.addEventListener('click', () => {
-  hamMenu.classList.toggle('active');
-  offScreenMenu.classList.toggle('active');
-})*/
+
+
+/* h2 slide in effect */
+
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const h2 = document.querySelector('h2.slidein');
+    h2.classList.add('show');
+  });
+
+
+/* typewriter on scroll effect*/
+
+
+  const bg = document.getElementById('bg');
+
+  function typewriter(el, text, speed = 30) {
+    let index = 0;
+    const interval = setInterval(() => {
+      el.textContent += text.charAt(index);
+      index++;
+      if (index === text.length) {
+        clearInterval(interval);
+        el.style.borderRight = 'none'; // remove cursor
+      }
+    }, speed);
+  }
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const fullText = el.getAttribute('data-text');
+        el.textContent = ''; // clear existing
+        typewriter(el, fullText);
+        observer.unobserve(el); // trigger only once
+      }
+    });
+  }, { threshold: 0.6 });
+  
+  document.querySelectorAll('.overlaybutton-text').forEach(el => {
+    const original = el.textContent;
+    el.setAttribute('data-text', original);
+    observer.observe(el);
+  });
+  
+
+
+/* tooltip effect effect*/
+
+
+document.querySelectorAll('.tooltip-container').forEach(container => {
+  const tooltip = container.querySelector('.tooltip-text');
+
+  container.addEventListener('mouseenter', () => {
+    tooltip.classList.add('show');
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    tooltip.style.left = `${e.clientX - rect.left + 10}px`;
+    tooltip.style.top = `${e.clientY - rect.top + 10}px`;
+  });
+
+  container.addEventListener('mouseleave', () => {
+    tooltip.classList.remove('show');
+  });
+});
+
+
+/* slider on the front page */
+
+
+
+
+const images = [
+  'img/creative/IMG_7760-min.jpg',
+  'img/creative/saintmartin.jpg',
+  'img/ikea/ikea1.avif'
+];
+
+  const slideshow = document.querySelector('.hero-slideshow');
+  let index = 0;
+
+  function changeBackground() {
+    // Fade out
+    slideshow.style.opacity = 0;
+
+    setTimeout(() => {
+      // Change image
+      slideshow.style.backgroundImage = `url(${images[index]})`;
+      // Fade in
+      slideshow.style.opacity = 1;
+
+      // Next image index
+      index = (index + 1) % images.length;
+    }, 500); // Half of the transition duration
+  }
+
+  // Init
+  slideshow.style.backgroundImage = `url(${images[0]})`;
+  slideshow.style.opacity = 1;
+
+  // Start slideshow
+  setInterval(changeBackground, 3000); // Every 5 seconds
+
+
+
+  /* the upload on top of case studies */
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".case-link").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = link.dataset.url;
+        fetch(url)
+          .then((res) => res.text())
+          .then((html) => {
+            const loader = document.getElementById("case-study-loader");
+            loader.innerHTML = `
+              <div class="loaded-case-study">
+                <button class="close-loader" onclick="closeLoader()">✕ Close</button>
+                ${html}
+              </div>`;
+            loader.scrollIntoView({ behavior: "smooth" });
+          });
+      });
+    });
+  });
+  
+  function closeLoader() {
+    document.getElementById("case-study-loader").innerHTML = "";
+  }
+  
+  /* slide out h1 effect*/
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.getElementById('myHeading');
+    const parallaxImage = document.querySelector('.parallax');
+  
+    if (!parallaxImage) return; // Safety check
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          heading.classList.add('hidden');
+        } else {
+          heading.classList.remove('hidden');
+        }
+      });
+    }, { threshold: 0 });
+  
+    observer.observe(parallaxImage);
+  });
+  
