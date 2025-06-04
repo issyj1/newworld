@@ -4,7 +4,6 @@
 /*        FONTS          */
 /* ===================== */
 
-
 @font-face {
   font-family: 'Bodoni Moda';
   src: url('fonts/BodoniModa_72pt-BlackItalic.ttf') format('ttf'); /* WOFF2 format for better browser support */
@@ -412,7 +411,7 @@ padding: 5%;
 }
 
 .scroll-content {
-  height: 1000px;
+  height: max-content;
   background-color: red;
   font-size: 24px;
   color: white;
@@ -761,6 +760,7 @@ width: 100%;
 
 /* Container for the two columns */
 .gallery-container {
+  
   display: grid;
   width: 100%;
   top: -100px;
@@ -795,6 +795,12 @@ width: 100%;
   width: 100%;
   cursor: none; /* Hides the system cursor */
 
+}
+
+.tooltip-container:hover .tooltip-text,
+.tooltip-container.active .tooltip-text {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .image-wrapper {
@@ -939,7 +945,7 @@ a.text {
         @media only screen and (max-width: 430px) {
 
           body {
-            max-width: 88%;
+            max-width: 100%;
             margin-left: 6px;
           }
           main {
