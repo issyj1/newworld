@@ -1,5 +1,8 @@
 
 
+
+
+
 function showMenu() {
   return;
   var items = document.getElementsByClassName("fade-item");
@@ -236,3 +239,27 @@ const images = [
     observer.observe(parallaxImage);
   });
   
+/*phone hover test tooltip */
+
+  document.querySelectorAll('.tooltip-container').forEach(container => {
+    container.addEventListener('click', function(e) {
+      e.preventDefault(); // prevent link from following immediately
+      
+      // Close all other tooltips
+      document.querySelectorAll('.tooltip-container.active').forEach(activeEl => {
+        if (activeEl !== this) activeEl.classList.remove('active');
+      });
+  
+      // Toggle active on this one
+      this.classList.toggle('active');
+    });
+  });
+  
+  // Optional: close tooltip if you tap outside
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.tooltip-container')) {
+      document.querySelectorAll('.tooltip-container.active').forEach(activeEl => {
+        activeEl.classList.remove('active');
+      });
+    }
+  });
