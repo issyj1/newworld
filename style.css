@@ -1,6 +1,8 @@
 * {box-sizing:border-box}
 
-
+/* ===================== */
+/*        FONTS          */
+/* ===================== */
 
 @font-face {
   font-family: 'Bodoni Moda';
@@ -24,81 +26,138 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family:'Scandia';
+  src: url('fonts/Scandia-Regular.otf') format('ttf'); /* WOFF2 format for better browser support */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 // <weight>: Use a value from 400 to 900
 // <uniquifier>: Use a unique and descriptive class name
 
-.bodoni-moda-<uniquifier> {
-  font-family: "Bodoni Moda", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 
+/* ===================== */
+/*        SECTIONS          */
+/* ===================== */
   body, html {
     margin: 0; /* Remove default margins */
     height: 100%; /* Make sure the body takes full viewport height */
     overflow-x: hidden; /* Enables horizontal scrolling */
     overflow-y: auto; /* Prevent vertical scrolling */
+    padding: 0;
   }
 
   body {
-    color: rgb(40, 27, 77);
+    color: rgb(124, 124, 124);
     box-sizing: border-box;
-    font-family: "Bodoni Moda";
-    background-color: #FAFAFA;
+    font-family: "Helvetica";
+    background-color: #fafafa;
     overflow-x: hidden;
     overscroll-behaviour: none;
+    background-size: cover;   /* Makes the background image cover the full width and height */
+
   }
   
- 
 
   main {
     /*margin-left: 160px;*/
-    width: 90%;
+    width: 100%;
     max-width: 1080px;
-    padding: 1rem;
-    padding-bottom: 25px;
-  }
-
-  .containerex {
-
     display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-width: 100%;
-    justify-content: space-evenly;
-    margin-left: 20px;
-    padding-bottom: 5px;
+    flex-direction: row;
+    height: 100%;
+
   }
-.containerex img {
-  -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+
+  
+
+.section-info {
+
+  display: flex;
+flex-direction: column;
+width: 100%;
+padding-left: 35%;
+padding-top: 30px;
+  justify-content: space-evenly;
+  margin-left: 0px;
+  padding-bottom: 10%;
 }
 
-  h1 {
 
-    font-size: 2em;
-    font-weight: 200;
-      font-family: Helvetica, sans-serif;
-    letter-spacing: 7px;
-    cursor: grab;
-    position: sticky;
-    margin: 0 auto;
-    align-content: center;
-    
-  }
+/* ===================== */
+/*        Headings and text styles          */
+/* ===================== */
 
 
 h1 a {
-  color: rgb(0, 0, 0);
-  margin: 20px;
+  color: red;
+}
+
+.h1-white {
+  color: white;
+}
+
+.h1-container {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); /* Flip to face inward */
+  z-index: 1000;
 
 }
+
+.mainly-text,
+.ads-text {
+
+  font-size: 7em;
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  cursor: grab;
+  z-index: 1000;
+}
+
+.ads-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+
+
+
+
 
 h2 {
   font-size: 3em;
   font-weight: 100;
+  font-family: "Scandia";
   line-height: 1;
   letter-spacing: 2px;
+}
+
+h2.slidein {
+  opacity: 0;
+  position: relative; /* required for left/right to work */
+  left: -1800px;
+  font-size: 2em;
+  line-height: 1.1;
+
+  
+  padding-left: 35%;
+  transition: all 2s ease-out;
+}
+
+h2.slidein.show {
+  left: 0;
+  opacity: 1;
 }
 
 h3 {
@@ -113,7 +172,36 @@ h4{
 p {
   font-family: "Bodoni Moda";
   font-weight: 100;
+ 
 }
+
+/*list item*/
+li {
+
+  display: inline-block;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-decoration: none;
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  width: max-content;
+  list-style: none;   
+}
+
+
+
+img.svg {
+  width: 80%;
+  display: inline-block;
+  z-index: -5;
+}
+
+
+/* ===================== */
+/*        EXTRA COLORS          */
+/* ===================== */
 
 .mystyle {
   color: rgb(170, 4, 211);
@@ -129,6 +217,31 @@ p {
   color: rgb(250, 12, 195);
   font-style: bold;
 }
+
+/* ===================== */
+/*        SECTIONS - container for case study items          */
+/* ===================== */
+.containerex {
+
+  display: flex;
+flex-direction: column;
+width: 100%;
+padding: 5%;
+  justify-content: space-evenly;
+  margin-left: 0px;
+  padding-bottom: 50px;
+}
+
+.containerex p {
+  padding-left: 35%;
+}
+
+.containerex img {
+-webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+}
+/* ===================== */
+/*        FOOTER          */
+/* ===================== */
 #footer {
   bottom: 0;
   display: flex;
@@ -139,7 +252,6 @@ p {
   font-size: 0.7em;               /* Default font size */
   z-index: 4;
   background-color: black;
-  position: fixed;
   margin-left: 0;
   margin-right: 0;
   padding: 10px;                  /* Padding to add space inside footer */
@@ -149,6 +261,74 @@ p {
 #footer li {
   padding: 10px;
   color: lightpink;               /* List item color */
+}
+
+/* ===================== */
+/*        next project button          */
+/* ===================== */
+.next-project-button {
+  display: inline-block;
+  width: 15%;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgb(124, 124, 124, 0.7);
+  color: white;
+  padding: 3px;
+  font-family: "Scandia";
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1100;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  
+}
+
+.next-project-button:hover {
+  background-color: red;
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+}
+
+/* ===================== */
+/*        case study onload styling          */
+/* ===================== */
+.case-study-loader {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-top: 2px solid #fc61ff;
+  position: relative;
+  z-index: 10;
+}
+
+.loaded-case-study {
+  animation: fadeInUp 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.close-loader {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #fc61ff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*the two image rows and column gallery*/
@@ -161,8 +341,10 @@ p {
       position: absolute;
     }
 
-    /*dashed line test*/
-
+ 
+/* ===================== */
+/*        EXTRA STYLES          */
+/* ===================== */
     .dashed-line {
     width: 100%; /* Full width */
     height: 2px; /* Line height */
@@ -212,131 +394,194 @@ p {
         max-width: 100%;
       }
     }
+
+
 /*END - Responsive image grid*/
+/* ===================== */
+/*        PARALLAX TEST         */
+/* ===================== */
+
+.parallax {
+  background-image: url("../img/forsite/431A7509 digi.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll-content {
+  height: 1000px;
+  background-color: red;
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+}
+
+/* logo and awards bit*/
+.logos-awards-section {
+    color: white;
+}
+
+.section-content {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.logos-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.logos-row img {
+  height: 40px;
+  filter: brightness(0) invert(1); /* makes logos white */
+}
+
+.awards-press h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.awards-press p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
 
 
-/*BANNER along bottom*/
+/*about section Parallax*/
 
-.banner {
-  width: 100%;
+.parallax-alt {
+  /* Replace with a different image URL */
+  background-image: url('img/vogueparis/kunsthal_lind_012_jpg_3455.webp');
+  min-height: 400px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-alt2 {
+  background-color: #fafafa;
+}
+
+
+/* testimonial Parallax*/
+
+
+/* ===================== */
+/*        VIEW THE WORK SECTION         */
+/* ===================== */
+
+
+.fullscreen-hero {
+  position: relative;
+  height: 100vh;
+  background-color: #000; /* fallback */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
   overflow: hidden;
+
+}
+
+/* Slideshow Layer */
+.hero-slideshow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Dark overlay on top of images */
+.fullscreen-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text a {
+  color: white;
+  text-decoration: none;
+  font-family: "Scandia";
+  font-size: 4rem;
+}
+
+
+
+
+/*END - Responsive image grid*/
+/* ===================== */
+/*        GRID TEST         */
+/* ===================== */
+
+.button-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  border: 0.1px solid #b8b6b6;
-  height: 200px;
-  margin-bottom: 25px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 16px 24px;
+  transition: background-color 0.3s ease;
 }
 
-.image-container {
-  display: flex;
-  animation: slide 25s linear infinite;
-  height: 200px;
-
+.grid-row:hover {
+  background-color: #e0e0e0;
 }
 
-.image-container img {
-
-  flex-shrink: 0;
+.button-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
 }
 
-@keyframes slide {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-100%);
-  }
-
-
+.overlaybutton-text {
+  font-size: 1rem;
+  color: #be2222;
 }
 
-/*logo BANNER along bottom*/
-
-.banner2 {
-  width: 100%;
-  align-items: center;
-  height: 100px;
-}
-
-.image-container2 {
-  display: flex;
-  height: 80px;
-  margin-bottom: 3rem;
-
-}
-
-.image-container2 img {
-  margin-left: 15px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 468px) {
-  .image-container2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 10px; /* Optional, for space between images */
-
-  }
-
-  .image-container2 img {
-    width: 40%; /* Ensure images are responsive */
-    height: auto;
-    display: block;
-
-  }
-}
-
-/* Old code */
 
 
 
-
-  /*galleries in section pages */
-
-
-  .backgroundtest {
-    background-color:rgba(224, 135, 253, 0.5);
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top: 0;
-    display: none;
-    font-size: 1.8rem;
-    transition: .3s ease;
-    z-index: -1;
-  }
-
-  .backgroundtest.active {
-    background-color:rgba(224, 135, 253, 0.5);
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    font-size: 1.8rem;
-    transition: .3s ease;
-    z-index: 1;
-  }
 
 /*galleries in section pages */
 
 /* list items before ham */
     /* Create four equal columns that sits next to each other */
   
+/* ===================== */
+/*        NAV          */
+/* ===================== */
 
-    .myUl {
-      display: flex;
-        flex-direction: column;
-        z-index: 4;
-        float: right;
-    text-decoration: none;
+/*media queries*/
 
-    }
 
-  ul {
-    z-index: -1;
-    
+  ul, #myUL, li {
+    z-index: 999;
   }
 
     a {
@@ -347,32 +592,14 @@ p {
       color: rgb(219, 58, 219);
     }
 
-    .myUl li {
-      color: pink;
-      text-decoration: none;
 
-       }
 
     .myUL a:hover {
       color: rgb(147, 21, 111);
 
     }
  
-li {
 
-        display: inline-block;
-        padding-bottom: 4px;
-        padding-top: 4px;
-        text-decoration: none;
-        color: rgb(52, 8, 107);
-        border-radius: 20px;
-        padding-right: 10px;
-        padding-left: 10px;
-        margin-bottom: 5px;
-        width: max-content;
-        list-style: none;   
-
-}
 
 
 /*ham menu - not displaying on desktop */
@@ -387,39 +614,25 @@ li {
 .hamburger-icon {
   font-size: 30px;
   cursor: pointer;
-  display: none; /* Hidden by default */
   z-index: 6;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Make the navigation visible on larger screens */
-.myUL {
-  display: flex;
-  list-style-type: none;
-}
+
 
 /* Style the links */
 .fade-item a {
   text-decoration: none;
-  color: black;
-  padding: 10px;
+
+    color: white;
+  padding: 1px;
 }
 
 
-
-/* Overlay background that will cover the screen */
-.overlay {
-  display: none; /* Hidden by default */
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
-  z-index: 1; /* Behind the menu */
-}
 
 /* When in mobile view */
-@media screen and (max-width: 768px) {
 
   h1 {
     z-index: 4;
@@ -444,13 +657,12 @@ li {
 
   .myUL {
     display: none; /* Hide the links initially */
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
-    margin-left: 20px;
-    width: 100%;
     transition: opacity 0.3s ease-in-out; /* Add smooth transition */
-    padding: 20px;
-
+    text-align: left;
+    left: 15%;
+    padding-top: 10px;
   }
   
 
@@ -459,12 +671,14 @@ li {
     opacity: 1; /* Fade in effect */   
   }
 
+/* the list of items */
   .myUL li {
-    text-align: left;
-    width: 100%;
-padding-top: 20px;
-margin-left: -40px;
+padding-left: 10px;
+padding-top: 10px;
+text-decoration: none;
   }
+
+  
 
   .myUL li a {
         color: white;
@@ -476,7 +690,7 @@ margin-left: -40px;
     height: 100vh;
     width:100%;
     top: 0;
-    right: -800px;
+    right: -1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -497,7 +711,7 @@ margin-left: -40px;
   }
 
 
-}
+
 
 @media screen and (max-width: 468px) {
   .hamburger-icon {
@@ -517,6 +731,7 @@ margin-left: -40px;
   li.fade2.fadein {
     font-size: 1.1em;
   }
+
   div.banner {
     height: 300px;
     width: 100%;
@@ -533,36 +748,12 @@ width: 100%;
 /* end of ham*/
 
 
-/*preload */
-
-.preload-finish {
-  display: none;
-}
-.preload {
-background-color: #fafafa;
-height: 100%;
-margin: 20px;
-
-}
-
-.loader-inner {
-width: 10%;
-align-content: center;
-margin-left: 5%;
-margin-top: 5%;
-margin-bottom: 5%;
-}
-
-.preload img {
-width: 10%;
-height: 10%;
-align-content: center;
-}
 
 
-/*text overlays*/
 
-
+/* ===================== */
+/*        CASE STUDY IMAGE CONTAINER     */
+/* ===================== */
 
 /*overlay image*/
 /* Container for all the gallery items */
@@ -570,9 +761,10 @@ align-content: center;
 /* Container for the two columns */
 .gallery-container {
   display: grid;
+  width: 100%;
+  top: -100px;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 20px; /* Horizontal gap between the columns */
-  margin: 20px;
 }
 
 /* Individual gallery columns */
@@ -580,6 +772,7 @@ align-content: center;
   display: flex;
   flex-direction: column;
   gap: 20px; /* Vertical gap between items */
+  z-index: 0;
 }
 
 /* Style for individual gallery items */
@@ -589,8 +782,56 @@ align-content: center;
   display: flex;
   flex-direction: column;
   height: auto; /* Let items take their natural height */
-  overflow: hidden;
+  overflow: visible;
 }
+
+/* tooltip test */
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: none; /* Hides the system cursor */
+
+}
+
+.image-wrapper {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  outline: 1px solid red; /* or any color you want */
+
+}
+
+.tooltip-text.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 
 h2.image {
   background-color: red;
@@ -600,75 +841,8 @@ h2.image {
 }
 
 
-/* what i do button and overlays test */
 
-.button-container {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 45%);
-  grid-gap: 10px;
-}
 
-.button {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  background-color: #fda839;
-  border: none;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
-  text-transform: uppercase;
-}
-.wide-button {
-  grid-column: span 2; /* This makes the 5th button span across 2 columns */
-}
-
-.button-text {
-  z-index: 0;
-
-}
-
-  .overlaybutton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(220, 218, 218);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 9999;  /* Ensure it's on top */
-  }
-  
-
-.overlaybutton-text {
-  color: #d507df;
-  font-size: 18px;
-}
-
-.button:hover .overlaybutton {
-  opacity: 1;
-}
-
-.button:hover .button-text {
-  visibility: hidden;
-}
-
-.button:active .overlaybutton {
-  opacity: 1;
-}
-.button:active .button-text {
-  visibility: hidden;
-}
 /* Style for the images */
 .gallery-item img {
   width: 100%; /* Make image take full width of the parent container */
@@ -684,8 +858,7 @@ h2.image {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(247, 17, 236); /* Semi-transparent dark overlay */
-  opacity: 0; /* Initially hidden */
+  background-color: rgba(247, 17, 236, 0.5); /* Semi-transparent dark overlay */
   transition: opacity 0.3s ease; /* Smooth transition for overlay */
   display: flex;
   justify-content: center;
@@ -697,12 +870,26 @@ h2.image {
   color: white;
   font-size: 24px;
   text-decoration: none;
+}
 
+a.text {
+  font-size: 20px;
+  align-items: center;
+  z-index: 1000;
+  color: rgb(0, 195, 255);        /* Footer text color */
 }
 
 /* Show overlay when hovering over the image */
-.gallery-item:hover .overlay {
-  opacity: 1;
+
+
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.rotate-on-hover:hover {
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+  ; /* You can change 5deg to any small angle */
 }
 
 /* Media Query for Mobile View */
@@ -721,111 +908,30 @@ h2.image {
 
 
 
-/* next click gallery */
-
-.img-gallery img {
-  width: 50%;
-  display: block;
-  left: 0;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: grab;
-  position: absolute;
-  bottom: 0.3%;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-
-}
-
-/* Next & previous buttons */
-.prev {
-    padding-right: 200px;
-    padding-top: 610px;
-    padding-left: 4px;
-    background-color:rgba(255, 217, 0 /50%);
-  }
-/* Position the "next button" to the right 
-WHY NOT WORKING?*/
-.next {
-    left: 30%;
-    padding-left: 200px;
-    padding-top: 610px;
-    padding-right: 4px;
-    background-color:rgba(255, 217, 0 /50%);
-
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover {
-  cursor: url(svg/prev.svg), auto; 
-  background-color:rgba(255, 217, 0 /50%);
-
-}
-
-.next:hover {
-  cursor: url(svg/Untitled-2.svg), auto; 
-  background-color:rgba(255, 217, 0 /50%);
-
-}
 
 
+/*banners*/
 
-/*media queries*/
-@media only screen and (max-width: 768px) {
-
-ul, #myUL, li, .nested {
-  z-index: 999;
-}
-  .img-gallery {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-    padding-left: 3%;
-    padding-bottom: 5%;
-    margin-right: 0;
-    z-index: -1;
+@media (max-width: 468px) {
+  .image-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Optional, for space between images */
 
   }
-    .img-gallery img {
-       padding-bottom: 2%;
-       padding-right: 3%; 
-       margin-left: auto; 
-       z-index: -1;
 
-    }
+  .image-container2 img {
+    width: 40%; /* Ensure images are responsive */
+    height: auto;
+    display: block;
 
-    #img-gallery-portrait {
-      width: 100%;
-      z-index: -1;
-      margin: auto;
+  }
+}
 
-
-    }
-    
-    #img-gallery-portrait img {
-      width: 100%;
-      z-index: -1;
-
-    }
-    
-   
         
 
-        .nested .about {
-            width: 500px;
-            background-color: rgb(250 250 250/ 70%);
-            z-index: 3;
-        }
-    
 
-      }
-
+      
 
    
       
@@ -845,16 +951,13 @@ ul, #myUL, li, .nested {
         width: 45%;
         font-size: 2.5em;
         padding-top: 5px;
+    
         white-space: nowrap;
         /*margin: auto;  */ 
         /*text-align: center;*/
      }
      
-     h2 {
-      font-size: 2.5em;
-      line-height: 1.1;
 
-     }
 
        li {
             display: block;
@@ -915,46 +1018,13 @@ ul, #myUL, li, .nested {
       padding: 15px; 
       position:static;
       /* Add more padding for mobile */
+      z-index: 1500;
     }
   
     #footer li {
       padding: 5px;                    /* Reduce padding for mobile */
       font-size: 1em;                   /* Adjust list item font size */
     }
-
-    /* buttons for mobile view*/
-
-.button {
-  width: 100%;
-}
-
-.button-container {
-  grid-template-columns: 1fr; /* 1 column, full width */
-  grid-template-rows: repeat(5, auto);
-  grid-gap: 5px;
-}
-
-
-.wide-button {
-  grid-column: span 1; /* This makes the 5th button span across 2 columns */
-}
-
-.button-text {
-  z-index: 0;
-}
-
-
-
-
-.overlaybutton-text {
-  color: #d507df;
-  font-size: 10px;
-}
-
-.preload img {
-  width: 30%;
-}
-
 
   }
 
