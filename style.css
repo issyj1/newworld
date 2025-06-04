@@ -256,7 +256,7 @@ padding: 5%;
   margin-left: 0;
   margin-right: 0;
   padding: 10px;                  /* Padding to add space inside footer */
-  width: 100vw;                   /* Full width */
+  width: 100%;                   /* Full width */
 }
 
 #footer li {
