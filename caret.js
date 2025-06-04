@@ -1,8 +1,5 @@
 
 
-
-
-
 function showMenu() {
   return;
   var items = document.getElementsByClassName("fade-item");
