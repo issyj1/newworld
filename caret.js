@@ -152,6 +152,28 @@ document.querySelectorAll('.tooltip-container').forEach(container => {
   });
 });
 
+/*mobile tooltip and rotate effect automatic*/
+
+// Run only on mobile
+if (window.innerWidth <= 768) {
+  const items = document.querySelectorAll('.rotate-on-hover');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active'); // remove when out of view
+      }
+    });
+  }, {
+    threshold: 0.3 // trigger when 30% visible
+  });
+
+  items.forEach(item => observer.observe(item));
+}
+
+
 
 /* slider on the front page */
 
@@ -239,27 +261,31 @@ const images = [
     observer.observe(parallaxImage);
   });
   
-/*phone hover test tooltip */
+/*parallax rectangle effect */
 
-  document.querySelectorAll('.tooltip-container').forEach(container => {
-    container.addEventListener('click', function(e) {
-      e.preventDefault(); // prevent link from following immediately
-      
-      // Close all other tooltips
-      document.querySelectorAll('.tooltip-container.active').forEach(activeEl => {
-        if (activeEl !== this) activeEl.classList.remove('active');
-      });
-  
-      // Toggle active on this one
-      this.classList.toggle('active');
-    });
-  });
-  
-  // Optional: close tooltip if you tap outside
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.tooltip-container')) {
-      document.querySelectorAll('.tooltip-container.active').forEach(activeEl => {
-        activeEl.classList.remove('active');
-      });
+
+const rectangle = document.querySelector('.slow-rectangle');
+const wrapper = document.querySelector('.poster-wrapper');
+
+window.addEventListener('scroll', () => {
+  const rectTop = wrapper.getBoundingClientRect().top;
+  // Move rectangle slower vertically relative to scroll
+  rectangle.style.transform = `translateY(${rectTop * 0.4}px)`;
+});
+
+
+
+/*parallax 2 */
+const parallaxSections = document.querySelectorAll('.parallax-container');
+
+window.addEventListener('scroll', () => {
+  parallaxSections.forEach(section => {
+    const img = section.querySelector('.parallax-img');
+    const containerTop = section.getBoundingClientRect().top;
+
+    if (containerTop < window.innerHeight && containerTop > -section.offsetHeight) {
+      img.style.transform = `translateY(${containerTop * -0.2}px)`;
     }
   });
+});
+
