@@ -731,8 +731,7 @@ text-decoration: none;
     position: absolute;
     transition: opacity 0.3s ease-in-out; /* Add smooth transition */
     text-align: center;
-    left: 3%;
-    padding-top: 500px;
+    margin: 0 auto;
   }
 
   .myUL.show {
@@ -740,7 +739,7 @@ text-decoration: none;
   }
 
   .myUL li {
-    font-size: 1.8em;
+    font-size: 1.2em;
   }
 
   li.fade2.fadein {
@@ -1009,8 +1008,20 @@ a.text {
         }
 
 
+        .h1-container {
+          flex-direction: row;
+          gap: 1em;
+          top: 7%;
+          left: 0.5em;
+        }
+        
+        .mainly-text,
+        .ads-text {
+      
+          font-size: 3em;
+     
+        }
 
- 
         .img-gallery img {
           
           z-index: -1;
