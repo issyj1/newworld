@@ -921,7 +921,11 @@ a.text {
 @media screen and (max-width: 768px) {
   /* Change the layout to one column on mobile devices */
   .gallery-container {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-columns: 1fr;
+    padding-left: 10%; 
+    padding-right: 10%; 
+    padding-bottom: 10%; 
+     /* Single column on small screens */
   }
 
   /* Adjust spacing between items in single column */
