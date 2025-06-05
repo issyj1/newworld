@@ -417,13 +417,17 @@ padding: 5%;
 
 .scroll-content {
   height: max-content;
-  background-color: red;
-  font-size: 24px;
-  color: white;
+  background-color: #fafafa;
+  font-size: 21px;
+  color: rgb(84, 83, 83);
   padding: 20px;
+  font-family: "Scandia";
 }
 
+.scroll-content p {
+  font-family: "Scandia";
 
+}
 
 /* logo and awards bit*/
 .logos-awards-section {
@@ -932,8 +936,35 @@ a.text {
   .gallery-column {
     gap: 15px; /* Smaller gap on mobile */
   }
-}
 
+  .h1-container {
+    flex-direction: row;
+    gap: 1em;
+    top: 7%;
+    left: 0.5em;
+  }
+  
+  .mainly-text,
+  .ads-text {
+  
+    font-size: 4.5em;
+  
+  }
+
+  .containerex {
+
+  padding: 5%;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    padding-bottom: 50px;
+  }
+  
+  .containerex p {
+    padding-left: 25%;
+  }
+  
+
+}
 
 
 
@@ -941,30 +972,13 @@ a.text {
 
 /*banners*/
 
-@media (max-width: 468px) {
-  .image-container2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 10px; /* Optional, for space between images */
-
-  }
-
-  .image-container2 img {
-    width: 40%; /* Ensure images are responsive */
-    height: auto;
-    display: block;
-
-  }
-}
-
-        
 
 
-      
+  
 
    
       
-        @media only screen and (max-width: 430px) {
+ @media only screen and (max-width: 430px) {
 
           body {
             max-width: 100%;
@@ -1068,7 +1082,19 @@ a.text {
       padding: 5px;                    /* Reduce padding for mobile */
       font-size: 1em;                   /* Adjust list item font size */
     }
-
+    .image-container2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+      gap: 10px; /* Optional, for space between images */
+  
+    }
+  
+    .image-container2 img {
+      width: 40%; /* Ensure images are responsive */
+      height: auto;
+      display: block;
+  
+    }
   }
 
 
