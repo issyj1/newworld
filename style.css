@@ -492,6 +492,22 @@ padding: 5%;
 }
 
 
+/* reverse parallax of this one above */
+
+/* Reverse layout: left image on top, right image behind */
+.parallax-container.reverse-style .parallax-left {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  width: 80%;
+
+}
+
+.parallax-container.reverse-style .parallax-right {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
 /*poster*/
 
 
