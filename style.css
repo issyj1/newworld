@@ -293,43 +293,8 @@ padding: 5%;
 /* ===================== */
 /*        case study onload styling          */
 /* ===================== */
-.case-study-loader {
-  margin-top: 50px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-top: 2px solid #fc61ff;
-  position: relative;
-  z-index: 10;
-}
 
-.loaded-case-study {
-  animation: fadeInUp 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
 
-.close-loader {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: #fc61ff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 /*the two image rows and column gallery*/
     /* Remove hyperlink lines */
@@ -398,21 +363,16 @@ padding: 5%;
 
 /*END - Responsive image grid*/
 /* ===================== */
-/*        PARALLAX TEST         */
+/*        PARALLAX SECTION         */
 /* ===================== */
 
 .parallax {
-  background-image: url("../img/forsite/431A7509 digi.jpg");
+  background-image: url("img/creative/IMG_7760-min.jpg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-@media screen and (max-width: 600px) {
-  .parallax {
-
-  }
 }
 
 .scroll-content {
@@ -479,7 +439,134 @@ padding: 5%;
   background-color: #fafafa;
 }
 
+/*two image parallax */
 
+
+
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 200px;
+  display: block;
+  padding: 5%;
+}
+
+/* Left image container holds the natural-size image */
+.parallax-left {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  /* or center with margin auto */
+  z-index: 1;
+}
+
+.parallax-left img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Right image overlaps the top-right */
+.parallax-right {
+  position: absolute;
+  top: -50px;   /* shift upward to overlap */
+  left: calc(50%); /* place it over the right side of the left image */
+  z-index: 2;
+  
+}
+
+.parallax-right img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-img {
+  will-change: transform;
+  object-fit: cover;
+}
+
+
+/*poster*/
+
+
+.spacer {
+  height: 100vh;
+}
+
+.poster-section {
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-wrapper {
+  position: relative;
+  width: 400px; /* poster width */
+}
+
+/* Rectangle exactly same size & ratio as poster */
+.slow-rectangle {
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  background: rgba(190, 189, 189, 0.3);
+
+  bottom: -10%;  /* offset down */
+  right: -45%;    /* offset left */
+
+  z-index: 1;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Poster on top */
+.poster-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+.text-overlay p{
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  outline: 1px solid red; /* or any color you want */
+}
 /* testimonial Parallax*/
 
 
@@ -782,7 +869,6 @@ width: 100%;
 
 /* Container for the two columns */
 .gallery-container {
-  
   display: grid;
   width: 100%;
   top: -100px;
@@ -963,7 +1049,12 @@ a.text {
     padding-left: 25%;
   }
   
+  /*parallax poster and rectangle section */
 
+  .poster-section {
+
+    padding: 20%;
+  }
 }
 
 
@@ -1001,7 +1092,32 @@ a.text {
         /*margin: auto;  */ 
         /*text-align: center;*/
      }
-     
+     .gallery-container {
+      padding-left: 15%;
+      padding-right: 15%;
+
+       /* Single column on small screens */
+    }
+
+     .rotate-on-hover {
+      transition: transform 0.4s ease;
+      transition-delay: 0.2s; /* Add delay before the effect starts */
+    
+    }
+    
+    .rotate-on-hover:hover {
+      transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+      transition-delay: 0.2s; /* Add delay before the effect starts */
+    
+    }
+    
+    .rotate-on-hover.active {
+      transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+    }
+
+    .tooltip-text {
+      visibility:visible;
+    }
 
 
        li {
