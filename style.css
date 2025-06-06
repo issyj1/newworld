@@ -510,10 +510,14 @@ padding: 5%;
 }
 /*poster*/
 
+.spacer2 {
+  height: 50.33vh;
+}
 
 .spacer {
   height: 100vh;
 }
+
 
 .poster-section {
   height: 150vh;
@@ -583,6 +587,8 @@ padding: 5%;
   z-index: 9999;
   outline: 1px solid red; /* or any color you want */
 }
+
+
 /* testimonial Parallax*/
 
 
@@ -1068,12 +1074,12 @@ a.text {
   /*parallax poster and rectangle section */
 
   .poster-section {
+    height: 100vh;
+    padding-left: 20%;
+    padding-right: 20%;
 
-    padding: 20%;
   }
 }
-
-
 
 
 
@@ -1171,6 +1177,18 @@ a.text {
           font-size: 3em;
      
         }
+/*parallax text*/
+        .text-overlay h1{
+          color: white;
+          border-radius: 6px;
+          align-items: center;
+          font-size: 14px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          transition: opacity 0.2s ease;
+          z-index: 9999;
+          margin: 0;
+          outline: 1px solid red; /* or any color you want */
+        }
 
         .img-gallery img {
           
@@ -1214,6 +1232,26 @@ a.text {
       padding: 5px;                    /* Reduce padding for mobile */
       font-size: 1em;                   /* Adjust list item font size */
     }
+
+    
+      .parallax {
+        min-height: 100vh; /* Fill the screen */
+      }
+
+    
+      
+      .hero-text a {
+        
+        font-size: 1rem;
+      }
+
+    }
+
+    div.spacer2 {
+      height: 15vh;
+    }
+    
+
     .image-container2 {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
@@ -1227,7 +1265,7 @@ a.text {
       display: block;
   
     }
-  }
+  
 
 
   /*end of media query*/
