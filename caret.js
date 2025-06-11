@@ -1,7 +1,22 @@
 
+/*preload*/
+
+const dots = document.getElementById('dots');
+let count = 1;
+
+const dotInterval = setInterval(() => {
+  count = (count % 3) + 1; // 1, 2, 3, then loop
+  dots.textContent = '.'.repeat(count);
+}, 500);
+
+window.addEventListener('load', function () {
+  clearInterval(dotInterval);
+  document.getElementById('preloader').style.display = 'none';
+  document.getElementById('main-content').style.display = 'block';
+});
 
 
-
+/*menu*/
 
 function showMenu() {
   return;
@@ -75,8 +90,9 @@ function toggleMenu() {
   overlay.classList.toggle('show'); // Toggle the overlay background
 
   // Toggle the h1 color to white when the menu is shown
-  h1.classList.toggle('h1-white');
-
+  var h1s = document.querySelectorAll('.h1-container h1');
+  h1s.forEach(h1 => h1.classList.toggle('h1-white'));
+  
   // Toggle the hamburger icon color to white when the menu is shown
   hamburgerIcon.classList.toggle('hamburger-icon-white');
 }
@@ -288,4 +304,5 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
 
