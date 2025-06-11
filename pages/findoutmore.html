@@ -13,7 +13,9 @@
   </head>
 
   <body>
-    
+    <div id="preloader">
+      <span id="loading-text">Loading</span><span id="dots">.</span>
+    </div>
 
 <main>
 
@@ -43,15 +45,11 @@
       </div>
   
     
+
   
-  
-  
-      
     <!-- Ham menu test -->
-  
-  
-  
-  
+
+
   
   <nav>
     <div class ="ham-menu">
@@ -63,29 +61,33 @@
 </main>
 
 <h2 class="slidein" id="myHeading">
-  Are you a small business and your website needs a refresh? <br>
-  Or a self-employed individual and need to show your work to the world? <br>
-  Do you need help making content for your social feed? <br>
-  <span class="mystyle2">Here's what I can do for you:</span>
+  
+  It's time for the world see your work. 
 </h2>
 
-<!-- New Parallax Section with Different Image -->
-<div class="parallax-alt"></div>
+<div class="containerex">
+  <p>Are you a small business and your website needs a refresh? <br>
+    Or a self-employed individual and need to show your work to the world? <br>
+    Do you need help making content for your social feed? <br>
+      Whether it's a brand launch, digital rebrand, or ongoing creative partnership.
+      I bring tailored solutions with measurable results.
+  </p>
+  </div>
 
-<div class="scroll-content">
-  <h2>Let's Create Something Together</h2>
-  <p>
-    Whether it's a brand launch, digital rebrand, or ongoing creative partnership —
-    I bring tailored solutions with measurable results.
-  </p>
-  <p>
-    My collaborative approach means we work together to refine your vision and turn it into bold, strategic creative that stands out.
-  </p>
-  <p>
-    Ready to elevate your digital presence? Let’s connect and talk ideas.
-  </p>
+
+<div class="intro-section">
+  <div class="intro-images">
+    <img src="../img/forsite/IMG_2214.JPG" class="parallax-thumb img1" alt="Thumbnail 1">
+    <img src="../img/forsite/IMG_3097.JPG" class="parallax-thumb img2" alt="Thumbnail 2">
+  </div>
+  <div class="intro-text">
+    <h4>Hi!</h4>
+    <p>I am a creative and web developer with a passion for building stunning advertising campaigns and polished digital experiences.
+      I have experience working with some great agencies and brands including Mother London, Vogue Paris and Saatchi & Saatchi.
+    I'm passionate about providing hollistic solutions for your brand.
+    </p>
+  </div>
 </div>
-
 
 <!-- Logos & Awards Parallax Section -->
 <section class="parallax logos-awards-section">
@@ -128,6 +130,16 @@
   </div>
 </section>
 
+
+
+
+
+
+
+  <!-- Thumbnails container -->
+
+
+
 <div class="parallax-alt2"></div>
 
   <div class="scroll-content">
@@ -152,7 +164,19 @@
 
   </div>
     
+<!-- New Parallax Section with Different Image -->
+<div class="parallax-alt"></div>
 
+<div class="scroll-content">
+  <h4>Let's Create Something Together</h4>
+
+  <p>
+    My collaborative approach means we work together to refine your vision and turn it into bold, strategic creative that stands out.
+  </p>
+  <p>
+    Ready to elevate your digital presence? Let’s connect and talk ideas.
+  </p>
+</div>
 
  
   <div class="scroll-content" style="background: lightgray;">
@@ -167,11 +191,39 @@
       Ready to elevate your digital presence? Let’s connect and talk ideas.
     </p>
   </div>
+
+
+
   
+
       <script src="../caret.js"></script>
  
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  let latestScrollY = 0;
+
+  function updateParallax() {
+    const img1 = document.querySelector('.img1');
+    const img2 = document.querySelector('.img2');
+
+    if (img1 && img2) {
+      img1.style.transform = `translateY(${latestScrollY * -0.1}px)`;
+      img2.style.transform = `translateY(${latestScrollY * 0.2}px)`;
+    }
+
+    requestAnimationFrame(updateParallax);
+  }
+
+  window.addEventListener('scroll', () => {
+    latestScrollY = window.scrollY;
+  });
+
+  requestAnimationFrame(updateParallax);
+});
+
+
+  </script>
     <div id="footer">
       <ul>
         <li>© Isabelle Johnson</li>
