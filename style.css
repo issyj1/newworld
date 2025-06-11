@@ -34,6 +34,9 @@
   font-display: swap;
 }
 
+
+
+
 // <weight>: Use a value from 400 to 900
 // <uniquifier>: Use a unique and descriptive class name
 
@@ -115,7 +118,7 @@ h1 a {
 
 .mainly-text,
 .ads-text {
-
+  letter-spacing: 0.1em;
   font-size: 7em;
   font-family: Helvetica, sans-serif;
   font-weight: 900;
@@ -218,6 +221,11 @@ img.svg {
   font-style: bold;
 }
 
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* ===================== */
 /*        SECTIONS - container for case study items          */
 /* ===================== */
@@ -290,6 +298,10 @@ padding: 5%;
   transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
 }
 
+.shift:hover {
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+
+}
 /* ===================== */
 /*        case study onload styling          */
 /* ===================== */
@@ -359,20 +371,62 @@ padding: 5%;
         max-width: 100%;
       }
     }
+/* ===================== */
+/*        preload section         */
+/* ===================== */
+#preloader {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  z-index: 9999;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  outline: 1px solid red; /* or any color you want */
+}
 
-
+    
+    /* Spinner animation */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
 /*END - Responsive image grid*/
 /* ===================== */
 /*        PARALLAX SECTION         */
 /* ===================== */
 
 .parallax {
-  background-image: url("img/creative/IMG_7760-min.jpg");
+  background-image: url("img/photography/431A7212\ edited\ less\ res.jpg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+}
+
+.parallax h1 {
+  color: white;
+  text-decoration: none;
+  font-family: "Scandia";
+  font-size: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.parallax li {
+  color: white;
+  font-family: "Scandia";
+  font-size: 1rem;
+
 }
 
 .scroll-content {
@@ -381,11 +435,11 @@ padding: 5%;
   font-size: 21px;
   color: rgb(84, 83, 83);
   padding: 20px;
-  font-family: "Scandia";
+  font-family: "Bodoni Moda";
 }
 
 .scroll-content p {
-  font-family: "Scandia";
+  font-family: "Bodoni Moda";
 
 }
 
@@ -408,13 +462,16 @@ padding: 5%;
 }
 
 .logos-row img {
-  height: 40px;
-  filter: brightness(0) invert(1); /* makes logos white */
+  height: 60px;
 }
 
 .awards-press h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
+
+}
+
+.awards-press li {
 }
 
 .awards-press p {
@@ -435,6 +492,7 @@ padding: 5%;
   background-size: cover;
 }
 
+
 .parallax-alt2 {
   background-color: #fafafa;
 }
@@ -451,6 +509,7 @@ padding: 5%;
   margin-top: 200px;
   display: block;
   padding: 5%;
+
 }
 
 /* Left image container holds the natural-size image */
@@ -508,10 +567,14 @@ padding: 5%;
   width: 50%;
   z-index: 1;
 }
+
+.reverse-style {
+  padding-bottom: 250px;
+}
 /*poster*/
 
 .spacer2 {
-  height: 50.33vh;
+  height: 70.33vh;
 }
 
 .spacer {
@@ -589,7 +652,83 @@ padding: 5%;
 }
 
 
-/* testimonial Parallax*/
+/* intro section Parallax*/
+
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 200px; /* or any value you prefer */
+  margin-top: 100px;
+  
+}
+
+.intro-images {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 300px; /* Allow it to shrink but have a minimum */
+  position: relative;
+}
+
+.parallax-thumb {
+  width: 70%;
+  max-width: 80%; /* Limit max width so images don't get too big */
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+.img2 {
+  z-index: 1;
+}
+
+.intro-text {
+  flex: 1 1 300px; /* Same for text, allow shrinking but set minimum */
+  max-width: 45%;   /* Give it space but less than half for breathing room */
+  height: max-content;
+  display: block;
+  z-index: 4;
+}
+.intro-text p{
+background-color: rgba(34, 34, 34, 0.9);
+color: white;
+padding: 6px 10px;
+border-radius: 6px;
+font-size: 14px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+transition: opacity 0.2s ease;
+z-index: 9999;
+outline: 1px solid red; /* or any color you want */
+}
+.intro-text h4 {
+  outline: 1px solid red; /* or any color you want */
+
+}
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .intro-images {
+    justify-content: center;
+  }
+  .parallax-thumb {
+    width: 100%;
+    max-width: max-content; /* Limit max width so images don't get too big */
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+  }
+  
+}
+
+
+
+
 
 
 /* ===================== */
