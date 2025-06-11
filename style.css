@@ -245,8 +245,11 @@ padding: 5%;
 }
 
 .containerex img {
+  margin-bottom: 3%;
 -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
 }
+
+
 /* ===================== */
 /*        FOOTER          */
 /* ===================== */
