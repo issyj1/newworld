@@ -36,7 +36,6 @@
 
 
 
-
 // <weight>: Use a value from 400 to 900
 // <uniquifier>: Use a unique and descriptive class name
 
@@ -60,7 +59,9 @@
     overflow-x: hidden;
     overscroll-behaviour: none;
     background-size: cover;   /* Makes the background image cover the full width and height */
-
+    font-family: "forma-djr-deck", sans-serif;
+    font-style: normal;   
+    font-weight: 200;
   }
   
 
@@ -70,7 +71,7 @@
     max-width: 1080px;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 100vh;
 
   }
 
@@ -93,9 +94,15 @@ padding-top: 30px;
 /*        Headings and text styles          */
 /* ===================== */
 
+h1 {
+  font-family: "forma-djr-deck", sans-serif;
+  font-weight: 700;
+font-style: normal;
+}
 
 h1 a {
   color: red;
+
 }
 
 .h1-white {
@@ -120,7 +127,6 @@ h1 a {
 .ads-text {
   letter-spacing: 0.1em;
   font-size: 7em;
-  font-family: Helvetica, sans-serif;
   font-weight: 900;
   margin: 0;
   padding: 0;
@@ -141,12 +147,19 @@ h1 a {
 h2 {
   font-size: 3em;
   font-weight: 100;
-  font-family: "Scandia";
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
   letter-spacing: 2px;
+  font-family: "forma-djr-deck", sans-serif;
+  font-style: normal;   
+  font-weight: 200;
+  
 }
 
 h2.slidein {
+  padding-top: 5%;
+
   opacity: 0;
   position: relative; /* required for left/right to work */
   left: -1800px;
@@ -173,9 +186,9 @@ h4{
 }
 
 p {
-  font-family: "Bodoni Moda";
+  font-family: "ltc-bodoni-175", serif;
   font-weight: 100;
- 
+  font-style: normal; 
 }
 
 /*list item*/
@@ -412,36 +425,61 @@ padding: 5%;
 /*        PARALLAX SECTION         */
 /* ===================== */
 
+
 .parallax {
-  background-image: url("img/photography/431A7212\ edited\ less\ res.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers items horizontally */
+  justify-content: center;   /* centers items vertically (optional) */
   min-height: 500px;
+  background-image: url("img/photography/431A7212 edited less res.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
-
-  display: flex;
 }
+
+
 
 .parallax h1 {
   position: sticky;
   top: 20px; /* distance from top when sticky */
   z-index: 2;
   color: white;
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin: 0;
   text-align: center;
   line-height: 1.2;
   padding-top: 20px; /* optional spacing */
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 .parallax li {
   color: white;
-  font-family: "Scandia";
+  display: inline-block;
+  text-align: left; /* if needed */
+  margin-top: 40px;
+  /* keep your other styles */
+flex-direction: column;
   font-size: 1rem;
-
+  position: sticky;
+  top: 40%; /* distance from top when sticky */
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  font-family: "Bodoni";
+  background-color: rgba(34, 34, 34, 0.9);
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  outline: 1px solid red; /* or any color you want */
 }
+
 
 .scroll-content {
   height: max-content;
@@ -670,7 +708,6 @@ padding: 5%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: opacity 0.2s ease;
   z-index: 9999;
-  outline: 1px solid red; /* or any color you want */
 }
 
 /* intro section Parallax*/
@@ -774,6 +811,7 @@ outline: 1px solid red; /* or any color you want */
 .fullscreen-hero {
   position: relative;
   height: 100vh;
+
   background-color: #000; /* fallback */
   display: flex;
   align-items: center;
@@ -813,7 +851,7 @@ outline: 1px solid red; /* or any color you want */
 .hero-text a {
   color: white;
   text-decoration: none;
-  font-family: "Scandia";
+  font-family: "scandia-web";
   font-size: 4rem;
 }
 
@@ -859,6 +897,7 @@ outline: 1px solid red; /* or any color you want */
   color: #be2222;
   
 }
+
 
 
 
@@ -1256,6 +1295,12 @@ a.text {
     padding-right: 20%;
 
   }
+
+  h2.slidein {
+    
+    padding-left: 20%;
+    
+  }
 }
 
 
@@ -1279,6 +1324,8 @@ a.text {
             
             padding: 0;
             margin: 0;
+            height: 100%;
+
           }
 
      h1 {
@@ -1293,7 +1340,6 @@ a.text {
      }
 
      h2.slidein {
-  
   font-size: 1.8em;
   line-height: 1.1;  
   padding-left: 25%;
@@ -1363,7 +1409,7 @@ a.text {
           font-size: 3em;
      
         }
-/*parallax text*/
+/*parallax mobile*/
 
 .text-overlay {
   position: relative;
@@ -1379,6 +1425,9 @@ a.text {
 /* Left image container holds the natural-size image */
 .parallax-left {
   margin-left: -10px;
+}
+.parallax-section {
+  width: 90%;
 }
 
 .parallax-right {
