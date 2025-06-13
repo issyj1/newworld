@@ -609,10 +609,6 @@ flex-direction: column;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.parallax-img {
-  will-change: transform;
-  object-fit: cover;
-}
 
 
 /* reverse parallax of this one above */
@@ -745,7 +741,7 @@ flex-direction: column;
 }
 
 .parallax-thumb {
-  width: 70%;
+  width: 100%;
   max-width: 80%; /* Limit max width so images don't get too big */
   transition: transform 0.2s ease-out;
   will-change: transform;
@@ -1447,7 +1443,7 @@ a.text {
   margin-left: 5px;
 }
 .parallax-section {
-  width: 90%;
+  width: 100%;
 }
 
 .parallax-right {
