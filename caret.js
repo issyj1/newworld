@@ -305,4 +305,71 @@ window.addEventListener('scroll', () => {
   });
 });
 
+/*dekstop hover*/
 
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  const shiftElements = document.querySelectorAll(".shift");
+
+  shiftElements.forEach(el => {
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const offsetX = (x - centerX) / centerX; // -1 to 1
+      const offsetY = (y - centerY) / centerY; // -1 to 1
+
+      const rotateX = -offsetY * 10;
+      const rotateY = offsetX * 10;
+
+      el.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  });
+}
+
+/*Phone h1 hover */
+if (window.innerWidth <= 768) {
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+      const shiftElements = document.querySelectorAll(".shift");
+
+      shiftElements.forEach(el => {
+        el.addEventListener("touchstart", function (e) {
+          const rect = el.getBoundingClientRect();
+          const x = e.touches[0].clientX - rect.left;
+          const y = e.touches[0].clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const offsetX = (x - centerX) / centerX;
+          const offsetY = (y - centerY) / centerY;
+
+          const rotateX = -offsetY * 10;
+          const rotateY = offsetX * 10;
+
+          // Fast tilt in
+          el.style.transition = "transform 0.2s ease-out";
+          el.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+
+          clearTimeout(el._tiltTimeout);
+          el._tiltTimeout = setTimeout(() => {
+            // Slow ease back
+            el.style.transition = "transform 0.6s ease-in-out";
+            el.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) translateY(0)';
+          }, 500);
+        });
+      });
+    }
+  });
+
+
+}
