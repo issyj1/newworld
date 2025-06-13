@@ -454,7 +454,6 @@ padding: 5%;
 
 .scroll-content p {
   font-family: "Bodoni Moda";
-
 }
 
 /* logo and awards bit*/
@@ -755,7 +754,7 @@ outline: 1px solid red; /* or any color you want */
     height: 100%;
     background: rgba(190, 189, 189, 0.3);
   
-    bottom: -15%;  /* offset down */
+    bottom: -5%;  /* offset down */
     right: -25%;    /* offset left */
   
     z-index: 1;
@@ -852,11 +851,13 @@ outline: 1px solid red; /* or any color you want */
   font-size: 1.2rem;
   font-weight: 600;
   color: #333333;
+  margin-right: 10px;
 }
 
 .overlaybutton-text {
   font-size: 1rem;
   color: #be2222;
+  
 }
 
 
@@ -1290,6 +1291,15 @@ a.text {
         /*margin: auto;  */ 
         /*text-align: center;*/
      }
+
+     h2.slidein {
+  
+  font-size: 1.8em;
+  line-height: 1.1;  
+  padding-left: 25%;
+  padding-right: 5%;
+}
+
      .gallery-container {
       padding-left: 15%;
       padding-right: 15%;
@@ -1365,6 +1375,29 @@ a.text {
   transition: opacity 0.2s ease;
   z-index: 9999;
 }
+
+/* Left image container holds the natural-size image */
+.parallax-left {
+  margin-left: -10px;
+}
+
+.parallax-right {
+  position: absolute;
+  top: -50px;   /* shift upward to overlap */
+  left: calc(40%); /* place it over the right side of the left image */
+  z-index: 2;
+  
+}
+
+.parallax-left img {
+  max-width: 90%;
+}
+
+.parallax-right img {
+  
+  max-width: 100%;
+}
+
 
         .img-gallery img {
           
