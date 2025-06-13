@@ -301,10 +301,17 @@ padding: 5%;
   transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
 }
 
-.shift:hover {
-  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
 
+
+.shift {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
 }
+
+.shift-tilt {
+  /* Added via JS with custom values for each tap */
+}
+
 /* ===================== */
 /*        case study onload styling          */
 /* ===================== */
@@ -412,17 +419,21 @@ padding: 5%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
+
   display: flex;
 }
 
 .parallax h1 {
+  position: sticky;
+  top: 20px; /* distance from top when sticky */
+  z-index: 2;
   color: white;
-  text-decoration: none;
-  font-family: "Scandia";
   font-size: 4rem;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
   text-align: center;
+  line-height: 1.2;
+  padding-top: 20px; /* optional spacing */
 }
 
 .parallax li {
@@ -461,6 +472,7 @@ padding: 5%;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -654,6 +666,13 @@ padding: 5%;
   outline: 1px solid red; /* or any color you want */
 }
 
+.text-overlay h1{
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  outline: 1px solid red; /* or any color you want */
+}
 
 /* intro section Parallax*/
 
@@ -729,7 +748,21 @@ outline: 1px solid red; /* or any color you want */
   
 }
 
-
+@media (max-width: 450px) {
+  .slow-rectangle {
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    background: rgba(190, 189, 189, 0.3);
+  
+    bottom: -15%;  /* offset down */
+    right: -25%;    /* offset left */
+  
+    z-index: 1;
+    will-change: transform;
+    pointer-events: none;
+  }
+}
 
 
 
@@ -925,6 +958,7 @@ outline: 1px solid red; /* or any color you want */
     text-align: left;
     left: 15%;
     padding-top: 10px;
+    margin-top: 0px;
   }
   
 
@@ -1320,17 +1354,17 @@ a.text {
      
         }
 /*parallax text*/
-        .text-overlay h1{
-          color: white;
-          border-radius: 6px;
-          align-items: center;
-          font-size: 14px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-          transition: opacity 0.2s ease;
-          z-index: 9999;
-          margin: 0;
-          outline: 1px solid red; /* or any color you want */
-        }
+
+.text-overlay {
+  position: relative;
+
+}
+.text-overlay h1{
+  color: white;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
 
         .img-gallery img {
           
