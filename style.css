@@ -805,6 +805,10 @@ outline: 1px solid red; /* or any color you want */
     will-change: transform;
     pointer-events: none;
   }
+  .parallax-thumb {
+    width: 45%;         /* scales width responsively */
+   /* ensures image fits inside without distortion */
+  }
 }
 
 
