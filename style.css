@@ -664,8 +664,8 @@ flex-direction: column;
   height: 100%;
   background: rgba(190, 189, 189, 0.3);
 
-  bottom: -10%;  /* offset down */
-  right: -45%;    /* offset left */
+  bottom: 10%;  /* offset down */
+  right: 45%;    /* offset left */
 
   z-index: 1;
   will-change: transform;
@@ -725,16 +725,19 @@ flex-direction: column;
 }
 .poster-section h1 {
   /* Your styles here */
-  margin-left: -110%;
-  color: paleturquoise;
+  margin-left: -140%;
+  color: rgb(5, 133, 246);
   text-shadow: none;
-  margin-top: 40%;
+  margin-top: 90%;
 }
 
 .poster-section p {
-  margin-left: -110%;
-  margin-top: 40%;
+  margin-left: -150%;
 
+}
+
+.reverse-style h1 {
+  color: rgb(230, 9, 149);
 }
 /* intro section Parallax*/
 
@@ -1471,6 +1474,19 @@ a.text {
   z-index: 9999;
 }
 
+.poster-section h1 {
+  /* Your styles here */
+  margin-left: 0%;
+  color: rgb(5, 133, 246);
+  text-shadow: none;
+  margin-top: 200px;
+}
+
+.poster-section p {
+  margin-left: 0%;
+  margin-top: 10%;
+
+}
 
 /* Left image container holds the natural-size image */
 .parallax-left {
