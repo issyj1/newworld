@@ -729,6 +729,7 @@ flex-direction: column;
   color: rgb(5, 133, 246);
   text-shadow: none;
   margin-top: 90%;
+  position: relative;
 }
 
 .poster-section p {
@@ -738,6 +739,7 @@ flex-direction: column;
 
 .reverse-style h1 {
   color: rgb(230, 9, 149);
+  position: relative;
 }
 /* intro section Parallax*/
 
@@ -1310,19 +1312,17 @@ a.text {
     flex-direction: row;
     gap: 1em;
     top: 7%;
-    left: 0.5em;
+    left: 0em;
   }
   
   .mainly-text,
   .ads-text {
   
-    font-size: 4.5em;
   
   }
   .mainly-text,
   .ads-text {
   
-    font-size: 4.5em;
   
   }
 
@@ -1451,7 +1451,7 @@ a.text {
           flex-direction: row;
           gap: 1em;
           top: 7%;
-          left: 0.5em;
+          left: 0em;
         }
         
         .mainly-text,
