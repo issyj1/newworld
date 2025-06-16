@@ -100,7 +100,7 @@ font-style: normal;
 }
 
 h1 a {
-  color: rgb(124, 124, 124);
+  color: red;
 }
 
 .h1-white {
@@ -449,14 +449,13 @@ padding: 5%;
   top: 20px; /* distance from top when sticky */
   z-index: 2;
   color: white;
-  font-family: "Scandia web"
+  font-family: "scandia web";
   font-size: 2.5rem;
   margin: 0;
-  text-align: center;
   line-height: 1.2;
+  margin: 0 auto;
   padding-top: 20px; /* optional spacing */
   padding-bottom: 20px;
-  align-items: center;
 }
 
 .parallax li {
@@ -813,6 +812,7 @@ outline: 1px solid red; /* or any color you want */
   .parallax-container {
     position: relative;
     width: 90%;
+    padding-bottom: 130px;
   }
 }
 
@@ -968,6 +968,7 @@ outline: 1px solid red; /* or any color you want */
   z-index: 6;
   justify-content: center;
   align-items: center;
+  color: red;
 }
 
 /* Make the navigation visible on larger screens */
@@ -1306,7 +1307,7 @@ a.text {
   /*parallax poster and rectangle section */
 
   .poster-section {
-    height: 100vh;
+    height: 80vh;
     width: 70%;
     padding-left: 10%;
   }
@@ -1386,7 +1387,9 @@ a.text {
     .tooltip-text {
       visibility:visible;
     }
-
+    .parallax h1 {
+      padding-right: 130px;
+    }
 
        li {
             display: block;
@@ -1427,6 +1430,7 @@ a.text {
 
 .text-overlay {
   position: relative;
+  margin-top: -200px;
 
 }
 .text-overlay h1{
@@ -1435,6 +1439,7 @@ a.text {
   transition: opacity 0.2s ease;
   z-index: 9999;
 }
+
 
 /* Left image container holds the natural-size image */
 .parallax-left {
