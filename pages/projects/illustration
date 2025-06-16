@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    
+    <title>Mainly Ads</title>
+    <link rel="shortcut icon" type="image/png" href="#">
+
+    <link rel="stylesheet" href="../../normalize.css">
+    <link href="../../style.css" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/orl1ofk.css">
+  </head>
+  <body>
+
+    
+<main>
+
+  <div class="h1-container">
+    <h1 class="mainly-text"><a href="../../index.html">MAINLY</a></h1>
+    <h1 class="ads-text"><a href="../../index.html">ADS</a></h1>
+  </div>
+
+
+  <div class="nav-container">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      &#9776; <!-- This is the hamburger icon -->
+    </div>
+  </div>
+
+  <!-- Overlay Background -->
+
+    
+      <div class="off-screen-menu"></div>
+
+      <ul class="myUL">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/casestudies.html">Case Studies</a></li>
+        <li><a href="../../pages/findoutmore.html">Find out more</a></li>
+      </ul>
+
+
+
+  
+
+
+
+    
+  <!-- Ham menu test -->
+
+
+
+
+
+<nav>
+  <div class ="ham-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+    </main>
+
+ 
+
+
+<div class="containerex">
+  <h2 class="slidein" id="myHeading">
+Illustration   
+  </h2>
+  <h4>
+  Illustration, Social Content.
+</h4>
+  <p> Work done for clients including charity LEYF. I can also use AI to bring hand-drawn illustrations into motion. 
+  </p>
+    
+
+<div class="row">
+    <div class="column">
+      <img src="../../img/illustration/9ab7f352-a783-4a90-b3e4-3ddf4b4b1f92.JPG>
+            <img src="paris.jpg">
+    </div>
+    <div class="column">
+      <img src="../../img/photography/431A7267.jpg">
+      <img src="../../img/photography/431A7212 edited less res.jpg">
+     
+
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+  <a href="../../pages/casestudies.html" class="next-project-button">Back to Case Studies →</a>
+
+      <script src="../../caret.js"></script>
+
+  
+  <div id="footer">
+  <li>© Isabelle Johnson</li>
+  
+  <li>isabellejohnson826@gmail.com</li>
+  <li>07847578611</li>
+  <li>London SW19</li>
+
+  </div>
+</body>
+</html>
