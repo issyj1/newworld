@@ -161,7 +161,7 @@ h2.slidein {
   left: -1800px;
   font-size: 2em;
   line-height: 1.1;  
-  padding-left: 35%;
+  padding-left: 25%;
   transition: all 2s ease-out;
 }
 
@@ -261,14 +261,25 @@ padding: 5%;
 }
 
 .containerex p, h4 {
-  padding-left: 35%;
+  padding-left: 25%;
 }
 
 .containerex img {
   margin-bottom: 3%;
 -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
+
+
+}
+.containerex img:hover {
+transform: scale(1.01);
 }
 
+h5 {
+  font-size: 1.2em;
+  font-family: "scandia web", sans-serif;
+  font-weight: 150;
+  margin-left: 40%;
+}
 
 /* ===================== */
 /*        FOOTER          */
@@ -321,7 +332,25 @@ padding: 5%;
   transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
 }
 
-
+.visit-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers items horizontally */
+  justify-content: center;  
+  height: 50vh;
+}
+.visit_button {
+  margin-bottom: 50%;
+  justify-content: center;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left; /* if needed */
+  /* keep your other styles */
+flex-direction: column;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
 
 .shift {
   transition: transform 0.3s ease;
@@ -433,7 +462,7 @@ padding: 5%;
 /* ===================== */
 
 
-.parallax {
+.parallax, .parallax-alt {
   display: flex;
   flex-direction: column;
   align-items: center;       /* centers items horizontally */
@@ -446,9 +475,20 @@ padding: 5%;
   background-size: cover;
 }
 
+.parallax-alt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers items horizontally */
+  justify-content: center;   /* centers items vertically (optional) */
+  min-height: 500px;
+  background-image: url("img/photography/431A7267.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-
-.parallax h1 {
+.parallax h1, .parallax-alt h1 {
   position: sticky;
   top: 20px; /* distance from top when sticky */
   z-index: 2;
@@ -462,7 +502,7 @@ padding: 5%;
   padding-bottom: 20px;
 }
 
-.parallax li {
+.parallax li, .parallax-alt li {
   color: white;
   display: inline-block;
   text-align: left; /* if needed */
@@ -487,7 +527,7 @@ flex-direction: column;
   outline: 1px solid red; /* or any color you want */
 }
 
-.parallax p {
+.parallax p, .parallax-alt p {
   padding-top: 5%;
 }
 .scroll-content {
@@ -715,17 +755,25 @@ flex-direction: column;
 }
 
 .text-overlay h1 {
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  outline: 1px solid red;
   outline-offset: 4px; /* Optional: makes it more visible */
   transition: opacity 0.2s ease;
   z-index: 9999;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
+
+.outlined-text {
+  display: inline;
+  outline: 1px solid red;
+  outline-offset: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  background-color: rgba(85, 84, 84, 0.6);
+}
+
 .poster-section h1 {
   /* Your styles here */
-  margin-left: -140%;
+  margin-left: 140%;
   color: rgb(5, 133, 246);
   text-shadow: none;
   margin-top: 90%;
@@ -733,7 +781,7 @@ flex-direction: column;
 }
 
 .poster-section p {
-  margin-left: -150%;
+  margin-left: 150%;
 }
 
 .reverse-style h1 {
@@ -790,6 +838,7 @@ transition: opacity 0.2s ease;
 z-index: 9999;
 outline: 1px solid red; /* or any color you want */
 }
+
 .intro-text h4 {
   outline: 1px solid red; /* or any color you want */
 
@@ -888,7 +937,9 @@ outline: 1px solid red; /* or any color you want */
   position: relative;
   z-index: 2;
   padding-left: 10px;
-
+  padding: 10%;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .hero-text a {
@@ -939,7 +990,8 @@ outline: 1px solid red; /* or any color you want */
 .overlaybutton-text {
   font-size: 1rem;
   color: #be2222;
-  
+  font-family: "scandia web"
+
 }
 
 
@@ -1347,7 +1399,7 @@ a.text {
 
   h2.slidein {
     
-    padding-left: 20%;
+    padding-left: 25%;
     
   }
 }
@@ -1524,6 +1576,7 @@ a.text {
 
       .containerex img {
         width: 100%;
+
       }
       
 
@@ -1566,6 +1619,7 @@ a.text {
       .hero-text a {
         
         font-size: 0.7rem;
+        padding: 10%;
       }
 
     }
