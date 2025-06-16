@@ -69,7 +69,7 @@
     /*margin-left: 160px;*/
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
 
   }
@@ -94,14 +94,13 @@ padding-top: 30px;
 /* ===================== */
 
 h1 {
-  font-family: "forma-djr-deck", sans-serif;
-  font-weight: 700;
+  font-family: "scandia web" sans-serif;
+  font-weight: 500;
 font-style: normal;
 }
 
 h1 a {
-  color: red;
-
+  color: rgb(124, 124, 124);
 }
 
 .h1-white {
@@ -125,8 +124,6 @@ h1 a {
 .mainly-text,
 .ads-text {
   letter-spacing: 0.1em;
-  font-size: 7em;
-  font-weight: 900;
   margin: 0;
   padding: 0;
   cursor: grab;
