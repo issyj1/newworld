@@ -475,6 +475,8 @@ flex-direction: column;
   background-size: cover;
 }
 
+
+
 .parallax-alt {
   display: flex;
   flex-direction: column;
@@ -888,6 +890,14 @@ outline: 1px solid red; /* or any color you want */
     width: 100%;
     padding-bottom: 130px;
   }
+
+ 
+    .parallax, .parallax-alt {
+      background-attachment: scroll;
+      background-size: cover;
+      background-position: center;
+  }
+
 }
 
 
