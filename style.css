@@ -309,27 +309,29 @@ h5 {
 /*        next project button          */
 /* ===================== */
 .next-project-button {
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #fafafa;
+  justify-content: center;
   display: inline-block;
-  width: 15%;
-  bottom: 30px;
-  left: 30px;
-  background-color: rgb(124, 124, 124, 0.7);
-  color: white;
-  padding: 3px;
-  font-family: "Scandia";
-  font-size: 0.8rem;
-  font-weight: 100;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1100;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  
+  margin: 0 auto;
+  text-align: left; /* if needed */
+  /* keep your other styles */
+flex-direction: column;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  padding-bottom: 30px;
+  padding-left: 10px;
 }
 
+
 .next-project-button:hover {
-  background-color: red;
-  transform: perspective(500px) rotateX(10deg) rotateY(10deg) translateY(-10px);
+  opacity: 1;
+  visibility: visible;
+  color: rgb(255, 174, 0);
 }
 
 .back-to-top-container {
@@ -367,7 +369,7 @@ flex-direction: column;
   position: relative;
 }
 
-.back-to-top-btn:hover .arrow-hover {
+.back-to-top-btn:hover .arrow-hover, .next-project-button:hover .arrow-hover {
   opacity: 1;
   visibility: visible;
   color: rgb(255, 174, 0);
@@ -1007,7 +1009,6 @@ outline: 1px solid red; /* or any color you want */
   max-width: 100%;
   margin: 40px auto;
   padding: 0 20px;
-  font-family: "Bodoni Moda";
 }
 
 .grid-row {
@@ -1021,20 +1022,19 @@ outline: 1px solid red; /* or any color you want */
 }
 
 .grid-row:hover {
-  background-color: #e0e0e0;
+  background-color: rgb(255, 174, 0);
 }
 
 .button-text {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #333333;
   margin-right: 10px;
 }
 
 .overlaybutton-text {
   font-size: 1rem;
-  color: #be2222;
-  font-family: "scandia web"
+  font-family: "scandia web";
 
 }
 
