@@ -373,3 +373,35 @@ if (window.innerWidth <= 768) {
 
 
 }
+
+
+/*me pictures parallax */
+
+    document.addEventListener('DOMContentLoaded', () => {
+  let latestScrollY = 0;
+
+  function updateParallax() {
+    const img1 = document.querySelector('.img1');
+    const img2 = document.querySelector('.img2');
+
+    if (img1 && img2) {
+      img1.style.transform = `translateY(${latestScrollY * -0.1}px)`;
+      img2.style.transform = `translateY(${latestScrollY * 0.2}px)`;
+    }
+
+    requestAnimationFrame(updateParallax);
+  }
+
+  window.addEventListener('scroll', () => {
+    latestScrollY = window.scrollY;
+  });
+
+  requestAnimationFrame(updateParallax);
+});
+
+
+
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
