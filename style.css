@@ -1562,6 +1562,13 @@ a.text {
           font-size: 1.9em;
      
         }
+
+        /*arrow hover*/
+        .arrow-hover {
+          opacity: 1;
+          visibility: visible;
+         
+        }
 /*parallax mobile*/
 
 .text-overlay {
