@@ -197,7 +197,7 @@ if (window.innerWidth <= 768) {
 
 
 const images = [
-  'img/creative/IMG_7760-min.jpg',
+  'img/illustration/9ab7f352-a783-4a90-b3e4-3ddf4b4b1f92.JPG',
   'img/creative/saintmartin.jpg',
   'img/ikea/ikea1.avif'
 ];
