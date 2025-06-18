@@ -841,7 +841,8 @@ flex-direction: column;
   margin: 0 auto;
   margin-bottom: 200px; /* or any value you prefer */
   margin-top: 100px;
-  
+  z-index: -50;
+
 }
 
 .intro-images {
@@ -849,6 +850,8 @@ flex-direction: column;
   gap: 20px;
   flex: 1 1 300px; /* Allow it to shrink but have a minimum */
   position: relative;
+    z-index: -50;
+
 }
 
 .parallax-thumb {
@@ -867,7 +870,7 @@ flex-direction: column;
   max-width: 45%;   /* Give it space but less than half for breathing room */
   height: max-content;
   display: block;
-  z-index: 4;
+  
 }
 .intro-text p{
 background-color: rgba(34, 34, 34, 0.9);
