@@ -63,6 +63,9 @@
     font-style: normal;   
     font-weight: 200;
   }
+  a {
+    color: rgb(124, 124, 124);
+  }
   
 
   main {
@@ -560,7 +563,7 @@ flex-direction: column;
 }
 .scroll-content, .scroll-content2 {
   height: max-content;
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.8);
   font-size: 21px;
   color: rgb(84, 83, 83);
   padding: 20px;
