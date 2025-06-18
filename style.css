@@ -281,7 +281,6 @@ h5 {
   font-size: 1.2em;
   font-family: "scandia web", sans-serif;
   font-weight: 150;
-  margin-left: 40%;
 }
 
 /* ===================== */
@@ -1643,6 +1642,16 @@ a.text {
     .container {
       width: 100%;
     }
+
+
+
+    /*back to top buttons*/
+
+    .back-to-top-container {
+     
+      height: 20vh;
+    }
+
 
     #footer {
       flex-direction: column;          /* Stack items vertically */
