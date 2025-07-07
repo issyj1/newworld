@@ -370,6 +370,7 @@ flex-direction: column;
   font-size: 30px;
   font-weight: 100;
   position: relative;
+    font-family: "Segoe UI Symbol", "Noto Sans Symbols", Arial, sans-serif, system-ui;
 }
 
 .back-to-top-btn:hover .arrow-hover, .next-project-button:hover .arrow-hover {
