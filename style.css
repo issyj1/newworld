@@ -805,6 +805,7 @@ flex-direction: column;
   outline-offset: 4px; /* Optional: makes it more visible */
   transition: opacity 0.2s ease;
   z-index: 9999;
+  color: red;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
 
@@ -813,7 +814,8 @@ flex-direction: column;
   outline-offset: 4px;
   transition: opacity 0.2s ease;
   z-index: 9999;
-  background-color: rgba(237, 234, 234, 0.6);
+  background-color: rgb(255, 255, 255, 0.7);
+
 }
 
 .poster-section h1 {
@@ -1593,10 +1595,9 @@ a.text {
 .text-overlay {
   position: relative;
   margin-top: -200px;
-
 }
 .text-overlay h1{
-  color: white;
+
   font-size: 13px;
   transition: opacity 0.2s ease;
   z-index: 9999;
@@ -1605,7 +1606,6 @@ a.text {
 .poster-section h1 {
   /* Your styles here */
   margin-left: 0%;
-  text-shadow: none;
   margin-top: 200px;
 }
 
