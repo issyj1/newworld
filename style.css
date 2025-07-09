@@ -119,10 +119,22 @@ h1 a {
   align-items: flex-end;
   gap: 1em;
   writing-mode: vertical-rl;
-  transform: rotate(180deg); /* Flip to face inward */
+  transform: rotate(180deg);
   z-index: 1000;
   margin-left: 1%;
   font-size: 2em;
+
+  /* Animation */
+  animation: slideLeftRight 3s ease-in-out alternate;
+}
+
+@keyframes slideLeftRight {
+  100% {
+    transform: rotate(180deg) translateX(0);
+  }
+  0% {
+    transform: rotate(180deg) translateX(100px);
+  }
 }
 
 .mainly-text,
