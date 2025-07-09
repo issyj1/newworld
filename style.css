@@ -90,8 +90,9 @@ padding-top: 30px;
   margin-left: 0px;
   padding-bottom: 10%;
 }
-
-
+.top-section {
+  height: 100vh;
+}
 /* ===================== */
 /*        Headings and text styles          */
 /* ===================== */
