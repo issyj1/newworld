@@ -805,7 +805,7 @@ flex-direction: column;
   outline-offset: 4px; /* Optional: makes it more visible */
   transition: opacity 0.2s ease;
   z-index: 9999;
-  color: red;
+  color: white;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
 
@@ -821,7 +821,6 @@ flex-direction: column;
 .poster-section h1 {
   /* Your styles here */
   margin-left: 140%;
-  text-shadow: none;
   margin-top: 90%;
   position: relative;
   background-color: none;
@@ -1598,7 +1597,7 @@ a.text {
 }
 .text-overlay h1{
 
-  font-size: 13px;
+  font-size: 22px;
   transition: opacity 0.2s ease;
   z-index: 9999;
 }
@@ -1630,6 +1629,7 @@ a.text {
   z-index: 2;
   
 }
+
 
 .parallax-left img {
   max-width: 90%;
