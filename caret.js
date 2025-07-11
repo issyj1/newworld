@@ -201,9 +201,9 @@ if (window.innerWidth <= 768) {
 
 
 const images = [
-  'img/creative/IMG_7760-min.jpg',
+  'img/ee/caroussel.gif',
   'img/creative/saintmartin.jpg',
-  'img/ikea/ikea1.avif'
+  'img/ikea/ikea1.png'
 ];
 
   const slideshow = document.querySelector('.hero-slideshow');
