@@ -518,7 +518,26 @@ flex-direction: column;
   background-size: cover;
 }
 
+.parallax-alt3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers items horizontally */
+  justify-content: center;   /* centers items vertically (optional) */
+  min-height: 500px;
+  background-image: url("img/photography/431A2571.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.parallax-alt3 h5 {
+  color: red;
+}
+
+.scroll-content h5 {
+  color: red;
+}
 
 .parallax-alt {
   display: flex;
