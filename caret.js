@@ -201,8 +201,8 @@ if (window.innerWidth <= 768) {
 
 
 const images = [
-  'img/creative/saintmartin.jpg',
-  'img/ikea/ikea1.png',
+  'img/ikea/ikea1.jpg',
+  'img/photography/431A7266.jpg',
   'img/leyfoccupancy/1.jpg'
 ];
 
