@@ -600,7 +600,7 @@ flex-direction: column;
   font-size: 21px;
   color: rgb(84, 83, 83);
   padding: 20px;
-  font-family: "Scandia";
+  font-family: "Bodoni";
   justify-content: center;
   width: 95%;
   margin: 0 auto;
@@ -825,6 +825,7 @@ flex-direction: column;
   transition: opacity 0.2s ease;
   z-index: 9999;
   color: white;
+ font-family: "forma-djr-deck", sans-serif;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
 
@@ -1049,16 +1050,20 @@ outline: 1px solid red; /* or any color you want */
   padding: 10%;
   margin: 0 auto;
   justify-content: center;
+  
 }
 
 .hero-text a {
   color: white;
   text-decoration: none;
   font-family: "scandia-web";
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
+h1 {
+  font-family: "forma-djr-deck", sans-serif;
 
+}
 
 
 /*END - Responsive image grid*/
