@@ -377,7 +377,6 @@ flex-direction: column;
 .arrow-hover {
   opacity: 0;
   visibility: hidden;
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 8px;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   font-size: 30px;
@@ -824,6 +823,8 @@ flex-direction: column;
   outline-offset: 4px; /* Optional: makes it more visible */
   transition: opacity 0.2s ease;
   z-index: 9999;
+    font-family: "scandia-web";
+
   color: white;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
@@ -922,6 +923,8 @@ outline: 1px solid red; /* or any color you want */
 
 }
 @media (max-width: 768px) {
+ 
+
   .intro-section {
     flex-direction: column;
     text-align: center;
@@ -1095,8 +1098,6 @@ outline: 1px solid red; /* or any color you want */
 
 .overlaybutton-text {
   font-size: 1rem;
-  font-family: "scandia web";
-
 }
 
 
@@ -1510,8 +1511,8 @@ a.text {
 
   h2.slidein {
     
-    padding-left: 25%;
-    
+  font-size: 1.6em;
+  
   }
 }
 
