@@ -823,8 +823,6 @@ flex-direction: column;
   outline-offset: 4px; /* Optional: makes it more visible */
   transition: opacity 0.2s ease;
   z-index: 9999;
-    font-family: "scandia-web";
-
   color: white;
   display: inline-block; /* KEY: ensures outline wraps all text lines */
 }
