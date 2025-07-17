@@ -201,7 +201,8 @@ h3 {
 h4{
   font-size: 1.2em;
   font-family: "scandia web", sans-serif;
-  font-weight: 150;
+  font-weight: 200;
+
 }
 
 p {
@@ -969,7 +970,7 @@ outline: 1px solid red; /* or any color you want */
   }
 
  
-    .parallax, .parallax-alt {
+    .parallax, .parallax-alt, .parallax-alt3 {
       background-attachment: scroll;
       background-size: cover;
       background-position: center;
