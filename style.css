@@ -894,6 +894,8 @@ flex-direction: column;
   max-width: 80%; /* Limit max width so images don't get too big */
   transition: transform 0.2s ease-out;
   will-change: transform;
+      object-fit: contain; /* ensures image fits inside without distortion */
+
 }
 
 .img2 {
