@@ -294,6 +294,18 @@ h5 {
   font-weight: 150;
 }
 
+h5 {
+  padding-top: 1%;
+  padding-right: 2%;
+  position: relative; /* required for left/right to work */
+  font-size: 1.5em;
+  line-height: 1.1;  
+  padding-left: 30%;
+  transition: all 2s ease-out;
+  padding-right: 5%;
+  font-family: "Scandia";
+  font-weight: 100;
+}
 /* ===================== */
 /*        FOOTER          */
 /* ===================== */
