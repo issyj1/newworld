@@ -176,7 +176,7 @@ h2.slidein {
   position: relative; /* required for left/right to work */
   left: -1800px;
   line-height: 1.1;  
-  padding-left: 25%;
+  padding-left: 30%;
   transition: all 2s ease-out;
 }
 
@@ -1316,6 +1316,8 @@ width: 100%;
   top: -100px;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 20px; /* Horizontal gap between the columns */
+    padding: 5%;
+
 }
 
 /* Individual gallery columns */
