@@ -667,7 +667,7 @@ flex-direction: column;
 
 .parallax-alt {
   /* Replace with a different image URL */
-  background-image: url('img/vogueparis/kunsthal_lind_012_jpg_3455.webp');
+  background-image: url('img/extrude.jpg');
   min-height: 400px; 
   background-attachment: fixed;
   background-position: center;
