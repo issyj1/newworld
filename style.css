@@ -290,7 +290,6 @@ transform: scale(1.01);
 
 h5 {
   font-size: 1.2em;
-  font-family: "scandia web", sans-serif;
   font-weight: 150;
 }
 
@@ -303,7 +302,6 @@ h5 {
   padding-left: 30%;
   transition: all 2s ease-out;
   padding-right: 5%;
-  font-family: "Scandia";
   font-weight: 100;
 }
 /* ===================== */
