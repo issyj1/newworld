@@ -99,7 +99,6 @@ padding-top: 30px;
 /*        Headings and text styles          */
 /* ===================== */
 h1 {
-  font-family: "scandia web" sans-serif;
   font-weight: 500;
 font-style: normal;
 }
@@ -165,7 +164,7 @@ h2 {
   font-style: normal;
   line-height: 1;
   letter-spacing: 2px;
-  font-family: "scandia web", sans-serif;
+  font-family: "scandia-web", sans-serif;
   font-style: normal;   
   font-weight: 200;
 
@@ -192,7 +191,7 @@ h2.slidein.show {
 
 h3 {
   font-size: 1.5em;
-  font-family: "scandia-web-stencil", sans-serif;
+  font-family: "scandia-web";
   padding: 0;
   font-weight: 100;
 
@@ -202,7 +201,7 @@ h3 {
 
 h4{
   font-size: 1.2em;
-  font-family: "scandia web", sans-serif;
+  font-family: "scandia-web", sans-serif;
   font-weight: 200;
 
 }
@@ -305,6 +304,7 @@ h5 {
   transition: all 2s ease-out;
   padding-right: 10%;
   font-weight: 100;
+
 }
 /* ===================== */
 /*        FOOTER          */
@@ -570,7 +570,7 @@ flex-direction: column;
   top: 20px; /* distance from top when sticky */
   z-index: 2;
   color: white;
-  font-family: "scandia web";
+  font-family: "scandia-web";
   font-size: 2.5rem;
   margin: 0;
   line-height: 1.2;
@@ -616,12 +616,12 @@ flex-direction: column;
   justify-content: center;
   width: 95%;
   margin: 0 auto;
-  font-family: "scandia web";
+  font-family: "scandia-web";
 }
 
 .scroll-content p {
   font-size: 0.8em;
-  font-family: "scandia web";
+  font-family: "scandia-web";
 
 }
 
