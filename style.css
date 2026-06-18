@@ -1513,13 +1513,7 @@ a.text {
   
   /*parallax poster and rectangle section */
 
-  .poster-section {
-    height: 90vh;
-    width: 60%;
-    margin-top: 20%;
-    margin-left: 15%;
-  }
-
+  
   .poster-wrapper {
     padding-left: 5%;
   }
@@ -1668,6 +1662,17 @@ a.text {
   margin-left: 20%;
   
   
+}
+
+.poster-section {
+  height: 80vh;
+  width: 60%;
+  margin-top: 20%;
+  margin-left: 15%;
+}
+.slow-rectangle {
+  width: 100%;
+  height: 90%;    
 }
 
 .zone {
