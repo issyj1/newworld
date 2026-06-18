@@ -280,7 +280,7 @@ padding: 5%;
 }
 
 .containerex p, h4 {
-  padding-left: 25%;
+  padding-left: 5%;
 }
 
 .containerex img {
@@ -305,7 +305,6 @@ h5 {
   transition: all 2s ease-out;
   padding-right: 10%;
   font-weight: 100;
-  height: 75vh;
 }
 /* ===================== */
 /*        FOOTER          */
@@ -1511,7 +1510,7 @@ a.text {
   }
   
   .containerex p {
-    padding-left: 25%;
+    padding-left: 5%;
   }
   
   /*parallax poster and rectangle section */
