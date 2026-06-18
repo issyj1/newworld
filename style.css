@@ -1517,6 +1517,7 @@ a.text {
     height: 90vh;
     width: 60%;
     margin-top: 20%;
+    margin-left: 15%;
   }
 
   .poster-wrapper {
@@ -1667,6 +1668,10 @@ a.text {
   margin-left: 20%;
   
   
+}
+
+.zone {
+  height: 100vh;
 }
 
 /* Left image container holds the natural-size image */
