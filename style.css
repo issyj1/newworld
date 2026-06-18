@@ -52,10 +52,12 @@
   }
 
   body {
-    color: rgb(124, 124, 124);
-    box-sizing: border-box;
-    font-family: "Helvetica";
-    background-color: #fafafa;
+    
+ color: rgb(124, 124, 124);
+ box-sizing: border-box;
+ font-family: "Helvetica";
+ background-color: #fafafa;
+
     overflow-x: hidden;
     overscroll-behaviour: none;
     background-size: cover;   /* Makes the background image cover the full width and height */
@@ -157,16 +159,16 @@ h1 a {
 
 
 h2 {
-  font-size: 2.4em;
+  font-size: 3em;
   font-weight: 100;
   font-weight: 400;
   font-style: normal;
   line-height: 1;
   letter-spacing: 2px;
-  font-family: "Scandia web", sans-serif;
+  font-family: "scandia web", sans-serif;
   font-style: normal;   
   font-weight: 200;
-  
+
 }
 
 h2.slidein {
@@ -175,6 +177,7 @@ h2.slidein {
   opacity: 0;
   position: relative; /* required for left/right to work */
   left: -1800px;
+  font-size: 2em;
   line-height: 1.1;  
   padding-left: 30%;
   transition: all 2s ease-out;
@@ -184,6 +187,8 @@ h2.slidein.show {
   left: 0;
   opacity: 1;
 }
+
+
 
 h3 {
   font-size: 1.5em;
@@ -287,6 +292,8 @@ padding: 5%;
 .containerex img:hover {
 transform: scale(1.01);
 }
+
+
 
 h5 {
   padding-top: 1%;
@@ -523,8 +530,8 @@ flex-direction: column;
 
 .parallax {
   min-height: 300px;
-}
 
+}
 .parallax-alt3 {
   display: flex;
   flex-direction: column;
@@ -601,7 +608,6 @@ flex-direction: column;
 .parallax p, .parallax-alt p {
   padding-top: 5%;
 }
-
 .scroll-content, .scroll-content2 {
   height: max-content;
   background-color: rgba(250, 250, 250, 0.8);
@@ -611,12 +617,12 @@ flex-direction: column;
   justify-content: center;
   width: 95%;
   margin: 0 auto;
-  font-family: "Scandia";
+  font-family: "scandia web";
 }
 
 .scroll-content p {
   font-size: 0.8em;
-  font-family: "Scandia";
+  font-family: "scandia web";
 
 }
 
@@ -903,8 +909,6 @@ flex-direction: column;
   max-width: 80%; /* Limit max width so images don't get too big */
   transition: transform 0.2s ease-out;
   will-change: transform;
-      object-fit: contain; /* ensures image fits inside without distortion */
-
 }
 
 .img2 {
@@ -1328,7 +1332,7 @@ width: 100%;
   top: -100px;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 20px; /* Horizontal gap between the columns */
-    padding: 5%;
+  padding: 5%;
 
 }
 
