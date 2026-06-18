@@ -166,7 +166,6 @@ h2 {
   font-style: normal;
   line-height: 1;
   letter-spacing: 2px;
-  font-family: "scandia-web", sans-serif;
   font-style: normal;   
   font-weight: 200;
 
@@ -529,10 +528,7 @@ flex-direction: column;
   background-size: cover;
 }
 
-.parallax {
-  min-height: 300px;
 
-}
 .parallax-alt3 {
   display: flex;
   flex-direction: column;
