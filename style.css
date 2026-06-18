@@ -289,20 +289,16 @@ transform: scale(1.01);
 }
 
 h5 {
-  font-size: 1.2em;
-  font-weight: 150;
-}
-
-h5 {
   padding-top: 1%;
   padding-right: 2%;
   position: relative; /* required for left/right to work */
-  font-size: 1.5em;
+  font-size: 1.1em;
   line-height: 1.1;  
   padding-left: 30%;
   transition: all 2s ease-out;
-  padding-right: 5%;
+  padding-right: 10%;
   font-weight: 100;
+  height: 75vh;
 }
 /* ===================== */
 /*        FOOTER          */
@@ -523,6 +519,10 @@ flex-direction: column;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.parallax {
+  min-height: 300px;
 }
 
 .parallax-alt3 {
