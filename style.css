@@ -280,10 +280,15 @@ padding: 5%;
   padding-bottom: 50px;
 }
 
-.containerex p, h4, h1 {
+.containerex p {
   padding-left: 25%;
 }
-
+.containerex h4 {
+  padding-left: 25%;
+}
+.containerex h1 {
+  padding-left: 25%;
+}
 .containerex img {
   margin-bottom: 3%;
 -webkit-filter: drop-shadow(1px 1px 1px #aaaaaa);
