@@ -1335,7 +1335,7 @@ width: 100%;
   top: -100px;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 20px; /* Horizontal gap between the columns */
-  padding: 5%;
+  padding: 25%;
 
 }
 
@@ -1478,6 +1478,7 @@ a.text {
     padding-left: 10%; 
     padding-right: 10%; 
     padding-bottom: 10%; 
+
      /* Single column on small screens */
   }
 
@@ -1574,6 +1575,7 @@ a.text {
      .gallery-container {
       padding-left: 15%;
       padding-right: 15%;
+  padding: 5%;
 
        /* Single column on small screens */
     }
