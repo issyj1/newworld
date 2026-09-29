@@ -1335,7 +1335,7 @@ width: 100%;
   top: -100px;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 20px; /* Horizontal gap between the columns */
-  padding: 25%;
+  padding: 10%;
 
 }
 
