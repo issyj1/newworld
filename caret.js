@@ -387,31 +387,31 @@ if (window.innerWidth <= 768) {
 
 /*me pictures parallax */
 
-    document.addEventListener('DOMContentLoaded', () => {
-  let latestScrollY = 0;
+
+/* Founder images parallax */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.querySelector('.intro-section');
+  const img1 = document.querySelector('.img1');
+  const img2 = document.querySelector('.img2');
+
+  if (!section || !img1 || !img2) return;
 
   function updateParallax() {
-    const img1 = document.querySelector('.img1');
-    const img2 = document.querySelector('.img2');
+    const rect = section.getBoundingClientRect();
 
-    if (img1 && img2) {
-      img1.style.transform = `translateY(${latestScrollY * -0.1}px)`;
-      img2.style.transform = `translateY(${latestScrollY * 0.2}px)`;
-    }
+    // Only move images while the section is near the viewport
+    const progress = (window.innerHeight - rect.top) /
+      (window.innerHeight + rect.height);
 
-    requestAnimationFrame(updateParallax);
+    const movement = Math.max(-65, Math.min(65, (progress - 0.25) * 30));
+
+    img1.style.transform = `translateY(${-movement}px)`;
+    img2.style.transform = `translateY(${movement}px)`;
   }
 
-  window.addEventListener('scroll', () => {
-    latestScrollY = window.scrollY;
-  });
+  window.addEventListener('scroll', updateParallax, { passive: true });
+  window.addEventListener('resize', updateParallax);
 
-  requestAnimationFrame(updateParallax);
+  updateParallax();
 });
-
-
-
-
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
