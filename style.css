@@ -613,7 +613,6 @@ flex-direction: column;
 }
 .scroll-content, .scroll-content2 {
   height: max-content;
-  background-color: rgba(250, 250, 250, 0.8);
   font-size: 21px;
   color: rgb(84, 83, 83);
   padding: 20px;
@@ -623,6 +622,10 @@ flex-direction: column;
   font-family: "scandia-web";
 }
 
+.scroll-content2 {
+  background-color: rgba(250, 250, 250, 0.8);
+
+}
 .scroll-content p {
   font-size: 0.8em;
   font-family: "scandia-web";
@@ -883,13 +886,29 @@ flex-direction: column;
 /* intro section Parallax*/
 
 
+.intro-images {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-images .parallax-thumb {
+  display: block;
+  width: 45%;
+  max-width: 300px;
+  height: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+ 
+}
+
 
 .intro-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
-  gap: 40px;
+
+  gap: 20px;
   width: 80%;
   margin: 0 auto;
   margin-bottom: 200px; /* or any value you prefer */
@@ -901,7 +920,7 @@ flex-direction: column;
 .intro-images {
   display: flex;
   gap: 20px;
-  flex: 1 1 300px; /* Allow it to shrink but have a minimum */
+  flex: 1 1 400px; /* Allow it to shrink but have a minimum */
   position: relative;
     z-index: -50;
 
@@ -1205,12 +1224,12 @@ outline: 1px solid red; /* or any color you want */
   }
  
   .hamburger-icon {
-    display: block; /* Show the hamburger icon on mobile */
     z-index: 99;
     margin-left: 2%;
     position: relative;
   }
 
+  
   .myUL {
     /* display: none; Hide the links initially */
     flex-direction: row;
