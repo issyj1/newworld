@@ -104,8 +104,7 @@ h1 {
 }
 
 h1 a {
-  color: red;
-  font-weight: 900;
+  font-weight: 800;
 
 }
 
@@ -120,12 +119,13 @@ h1 a {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 1em;
+  gap: 0.2em;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   z-index: 1000;
-  margin-left: 1%;
-  font-size: 2em;
+  margin-left: 0.6%;
+  font-size: 1em;
+  font-family: Scandia;
 
   /* Animation */
   animation: slideLeftRight 3s ease-in-out alternate;
@@ -189,6 +189,17 @@ h2.slidein.show {
   opacity: 1;
 }
 
+h2#myHeading2 {
+font-size: 1em;
+padding-right: 6%;
+padding-left: 15%;
+color: rgb(115, 114, 114);
+}
+
+#myHeading2:hover {
+  
+  color: rgb(15, 3, 3);
+  }
 
 
 h3 {
@@ -209,7 +220,7 @@ h4{
 }
 
 p {
-  font-family: "ltc-bodoni-175", serif;
+  font-family: "scandia-web", sans-serif;
   font-weight: 100;
   font-style: normal; 
 }
@@ -774,7 +785,7 @@ flex-direction: column;
 
 
 .poster-section {
-  height: 150vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,11 +804,11 @@ flex-direction: column;
   background: rgba(190, 189, 189, 0.3);
 
   bottom: -10%;  /* offset down */
-  right: -45%;    /* offset left */
-
-  z-index: 1;
+  right: -25%;    /* offset left */
   will-change: transform;
   pointer-events: none;
+  z-index: -1000;
+
 }
 
 /* Poster on top */
@@ -806,7 +817,7 @@ flex-direction: column;
   width: 100%;
   height: 100%;
   overflow: visible;
-  z-index: 2;
+  z-index: -900;
 }
 
 .poster-image {
@@ -991,9 +1002,8 @@ outline: 1px solid red; /* or any color you want */
     background: rgba(190, 189, 189, 0.3);
   
     bottom: -5%;  /* offset down */
-    right: -25%;    /* offset left */
+    right: -15%;    /* offset left */
   
-    z-index: 1;
     will-change: transform;
     pointer-events: none;
   }
@@ -1163,13 +1173,12 @@ outline: 1px solid red; /* or any color you want */
     }
 
    .myUL a {
-      color: rgb(219, 58, 219);
     }
 
 
 
     .myUL a:hover {
-      color: rgb(147, 21, 111);
+      color: rgb(187, 187, 187);
 
     }
  
@@ -1185,13 +1194,16 @@ outline: 1px solid red; /* or any color you want */
 
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .hamburger-icon {
   font-size: 30px;
   cursor: pointer;
   z-index: 6;
   justify-content: center;
   align-items: center;
-  color: red;
 }
 
 /* Make the navigation visible on larger screens */
@@ -1225,7 +1237,9 @@ outline: 1px solid red; /* or any color you want */
  
   .hamburger-icon {
     z-index: 99;
-    margin-left: 2%;
+    margin-left: 1%;
+    margin-top: 0%;
+
     position: relative;
   }
 
@@ -1236,10 +1250,10 @@ outline: 1px solid red; /* or any color you want */
     position: absolute;
     transition: opacity 0.3s ease-in-out; /* Add smooth transition */
     text-align: left;
-    left: 15%;
-    padding-top: 10px;
+    left: 5%;
+    padding-top: 2px;
     margin-top: 0px;
-    color: red;
+    color: black;
   }
   
 
@@ -1260,12 +1274,12 @@ text-decoration: none;
   
 
   .myUL li a {
-        color: white;
-
+        color: #fafafa;
+      font-family: "Scandia";
   }
 
   .off-screen-menu {
-    background-color: rgb(250, 12, 195);
+    background-color: rgb(0, 0, 0);
     height: 100vh;
     width:100%;
     top: 0;
