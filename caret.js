@@ -87,21 +87,21 @@ var items = document.getElementsByClassName("fade2");
 function toggleMenu() {
   var menu = document.querySelector('.myUL');
   var overlay = document.querySelector('.off-screen-menu');
-  var h1 = document.querySelector('h1'); // Select the h1 element
-  var hamburgerIcon = document.querySelector('.hamburger-icon'); // Select the hamburger icon
+  var hamburgerIcon = document.querySelector('.hamburger-icon');
 
-  menu.classList.toggle('show'); // Toggle the visibility of the menu
-  overlay.classList.toggle('show'); // Toggle the overlay background
+  menu.classList.toggle('show');
+  overlay.classList.toggle('show');
 
-  // Toggle the h1 color to white when the menu is shown
+  // Prevent background scrolling
+  document.body.classList.toggle('menu-open');
+
+  // Toggle h1 colour
   var h1s = document.querySelectorAll('.h1-container h1');
   h1s.forEach(h1 => h1.classList.toggle('h1-white'));
-  
-  // Toggle the hamburger icon color to white when the menu is shown
+
+  // Toggle hamburger icon colour
   hamburgerIcon.classList.toggle('hamburger-icon-white');
 }
-
-
 
 
 
