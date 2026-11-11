@@ -125,7 +125,7 @@ h1 a {
   z-index: 1000;
   margin-left: 0.6%;
   font-size: 1em;
-  font-family: Scandia;
+  font-family: "scandia-web";
 
   /* Animation */
   animation: slideLeftRight 3s ease-in-out alternate;
@@ -1275,8 +1275,8 @@ text-decoration: none;
 
   .myUL li a {
         color: #fafafa;
-      font-family: "Scandia";
-  }
+        font-family: "scandia-web";
+      }
 
   .off-screen-menu {
     background-color: rgb(0, 0, 0);
@@ -1560,6 +1560,7 @@ a.text {
   
   .poster-wrapper {
     padding-left: 5%;
+    width: 100%;
   }
 
   h2.slidein {
@@ -1695,6 +1696,9 @@ a.text {
   transition: opacity 0.2s ease;
   z-index: 9999;
 }
+.poster-section {
+height: 140vh;
+ }
 
 .poster-section h1 {
   /* Your styles here */
