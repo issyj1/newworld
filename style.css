@@ -1326,7 +1326,7 @@ text-decoration: none;
 
   .myUL.show {
     display: flex; /* Show links when the menu is toggled */
-    padding-left: 3%;
+    padding-left: 6%;
 
   }
 
