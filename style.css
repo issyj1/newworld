@@ -190,7 +190,7 @@ h2.slidein.show {
 }
 
 h2#myHeading2 {
-font-size: 1em;
+font-size: 1.1em;
 padding-right: 6%;
 padding-left: 15%;
 color: rgb(115, 114, 114);
@@ -1326,7 +1326,7 @@ text-decoration: none;
 
   .myUL.show {
     display: flex; /* Show links when the menu is toggled */
-    padding-left: 6%;
+    padding-left: 10%;
 
   }
 
